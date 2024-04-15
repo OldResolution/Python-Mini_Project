@@ -24,11 +24,5 @@
       "name": "github_2",
       "icon": "Qss/icons/icons/font_awesome/brands/github.png"
     }
-  ],
-  "QCustomCheckBox": [
-    {
-      "name": "checkBox_2",
-      "icon": "Qss/icons/icons/material_design/color_lens.png"
-    }
   ]
 }
