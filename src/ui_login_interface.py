@@ -420,14 +420,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.horizontalLayout_5.setContentsMargins(20, 0, 0, 0)
-        self.checkBox_2 = QCustomCheckBox(self.footer)
-        self.checkBox_2.setObjectName(u"checkBox_2")
-        icon4 = QIcon()
-        icon4.addFile(u":/material_design/icons/material_design/color_lens.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.checkBox_2.setIcon(icon4)
-
-        self.horizontalLayout_5.addWidget(self.checkBox_2)
-
         self.checkBox = QCustomCheckBox(self.footer)
         self.checkBox.setObjectName(u"checkBox")
         self.checkBox.setMinimumSize(QSize(150, 0))
@@ -481,7 +473,6 @@ class Ui_MainWindow(object):
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Or Register with socials", None))
         self.google_2.setText("")
         self.github_2.setText("")
-        self.checkBox_2.setText(QCoreApplication.translate("MainWindow", u"Dark Mode", None))
         self.checkBox.setText(QCoreApplication.translate("MainWindow", u"Remember me", None))
     # retranslateUi
 

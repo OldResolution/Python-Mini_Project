@@ -797,17 +797,6 @@
        <property name="bottomMargin">
         <number>0</number>
        </property>
-       <item>
-        <widget class="QCustomCheckBox" name="checkBox_2">
-         <property name="text">
-          <string>Dark Mode</string>
-         </property>
-         <property name="icon">
-          <iconset resource="../Qss/icons/_icons.qrc">
-           <normaloff>:/material_design/icons/material_design/color_lens.png</normaloff>:/material_design/icons/material_design/color_lens.png</iconset>
-         </property>
-        </widget>
-       </item>
        <item alignment="Qt::AlignRight">
         <widget class="QCustomCheckBox" name="checkBox">
          <property name="minimumSize">

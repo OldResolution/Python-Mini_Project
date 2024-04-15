@@ -955,3 +955,51 @@
 2024-04-05 00:08:11,721 - INFO - ('Current icons color ', '#333333', 'New icons color', '#F5F5F5')
 2024-04-05 00:08:11,721 - INFO - Generating icons for your theme, please wait. This may take long
 2024-04-05 00:08:12,539 - INFO - ('DONE: Current icons color ', '#F5F5F5')
+2024-04-05 17:35:32,406 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-05 17:35:33,653 - INFO - Checking icons for Midnight Teal Slate theme. Icons color: #F5F5F5
+2024-04-13 02:17:51,654 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-13 02:17:52,832 - INFO - Checking icons for Midnight Teal Slate theme. Icons color: #F5F5F5
+2024-04-13 02:17:53,741 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-13 02:17:54,158 - INFO - Checking icons for Midnight Teal Slate theme. Icons color: #F5F5F5
+2024-04-13 02:17:54,534 - INFO - Checking icons for qt designer app.
+2024-04-13 02:17:55,355 - INFO - all icons have been checked and missing icons generated!
+2024-04-13 02:18:01,166 - INFO - ('Current icons color ', '#F5F5F5', 'New icons color', '#333333')
+2024-04-13 02:18:01,167 - INFO - Generating icons for your theme, please wait. This may take long
+2024-04-13 02:18:01,555 - INFO - ('DONE: Current icons color ', '#333333')
+2024-04-13 02:19:14,853 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-13 02:19:15,344 - INFO - Checking icons for Midnight Teal Slate theme. Icons color: #005555
+2024-04-13 02:19:57,851 - INFO - ('Current icons color ', '#333333', 'New icons color', '#005555')
+2024-04-13 02:19:57,852 - INFO - Generating icons for your theme, please wait. This may take long
+2024-04-13 02:21:41,108 - INFO - ('Current icons color ', '#005555', 'New icons color', '#333333')
+2024-04-13 02:21:41,109 - INFO - Generating icons for your theme, please wait. This may take long
+2024-04-13 02:21:41,613 - INFO - ('DONE: Current icons color ', '#333333')
+2024-04-13 02:21:44,636 - INFO - ('Current icons color ', '#333333', 'New icons color', '#F5F5F5')
+2024-04-13 02:21:44,637 - INFO - Generating icons for your theme, please wait. This may take long
+2024-04-13 02:21:44,921 - INFO - ('DONE: Current icons color ', '#F5F5F5')
+2024-04-13 02:23:59,095 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-13 02:23:59,645 - INFO - Checking icons for Midnight Teal Slate theme. Icons color: #F5F5F5
+2024-04-13 02:24:47,699 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-13 02:24:47,977 - INFO - Checking icons for Midnight Teal Slate theme. Icons color: #F5F5F5
+2024-04-13 02:24:48,275 - INFO - Checking icons for qt designer app.
+2024-04-13 02:24:48,827 - INFO - ('Current icons color ', '#F5F5F5', 'New icons color', '#333333')
+2024-04-13 02:24:48,827 - INFO - Generating icons for your theme, please wait. This may take long
+2024-04-13 02:24:49,305 - INFO - ('DONE: Current icons color ', '#333333')
+2024-04-15 06:03:16,633 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 06:03:23,615 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 06:03:23,858 - INFO - Checking icons for Midnight Teal Slate theme. Icons color: #F5F5F5
+2024-04-15 06:03:24,694 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 06:03:24,929 - INFO - Checking icons for Midnight Teal Slate theme. Icons color: #F5F5F5
+2024-04-15 06:03:25,177 - INFO - Checking icons for qt designer app.
+2024-04-15 06:03:52,911 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 06:03:57,336 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 06:03:57,607 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 06:03:57,832 - INFO - Checking icons for qt designer app.
+2024-04-15 06:04:13,053 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 06:04:39,408 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 06:04:39,841 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 06:04:40,242 - INFO - Checking icons for qt designer app.
+2024-04-15 06:04:40,640 - INFO - all icons have been checked and missing icons generated!
+2024-04-15 15:55:49,929 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 15:55:51,670 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-04-15 15:55:52,549 - INFO - Checking icons for qt designer app.
+2024-04-15 15:55:54,287 - INFO - all icons have been checked and missing icons generated!
