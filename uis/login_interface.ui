@@ -625,7 +625,7 @@
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_10">
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_4">
+                  <widget class="QLineEdit" name="r_username">
                    <property name="minimumSize">
                     <size>
                      <width>200</width>
@@ -643,7 +643,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_5">
+                  <widget class="QLineEdit" name="r_password">
                    <property name="font">
                     <font>
                      <pointsize>10</pointsize>
@@ -655,7 +655,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_6">
+                  <widget class="QLineEdit" name="r_conpasswprd">
                    <property name="font">
                     <font>
                      <pointsize>10</pointsize>
@@ -667,7 +667,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_3">
+                  <widget class="QLineEdit" name="r_emailid">
                    <property name="font">
                     <font>
                      <pointsize>10</pointsize>
