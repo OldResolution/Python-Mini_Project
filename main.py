@@ -4,6 +4,7 @@ import os
 
 # IMPORT GUI FILE
 from src.ui_login_interface import *
+from src.ui_dashboard import *
 from database import login, signup_user  # Import login and signup_user functions from database module
 
 # IMPORT Custom widgets
@@ -16,6 +17,7 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
         # APPLY JSON STYLESHEET
 
         # self = QMainWindow class
@@ -37,19 +39,40 @@ class MainWindow(QMainWindow):
     def login(self):
         username = self.ui.lineEdit.text()
         password = self.ui.lineEdit_2.text()
-        success, message = login(username, password)
-        self.showNotif(message)
+
+        if not username and not password:
+            self.showNotif("Username and password are empty")
+        elif not username:
+            self.showNotif("Username is empty")
+        elif not password:
+            self.showNotif("Password is empty")
+        else:
+            success, message = login(username, password)
+            self.showNotif(message)
 
     # Function to handle signup
     def signup(self):
-        if self.ui.r_password.text() == self.ui.r_conpasswprd.text():
-            username = self.ui.r_username.text()
-            password = self.ui.r_password.text()
-            email = self.ui.r_emailid.text()
+        username = self.ui.r_username.text()
+        password = self.ui.r_password.text()
+        confirm_password = self.ui.r_conpasswprd.text()
+        email = self.ui.r_emailid.text()
+
+        if not (username or password or confirm_password or email):
+            self.showNotif("All fields are empty")
+        elif not username:
+            self.showNotif("Username is empty")
+        elif not password:
+            self.showNotif("Password is empty")
+        elif not confirm_password:
+            self.showNotif("Confirm password is empty")
+        elif not email:
+            self.showNotif("Email is empty")
+        elif password != confirm_password:
+            self.showNotif("Passwords do not match")
+        else:
             success, message = signup_user(username, password, email)
             self.showNotif(message)
-        else:
-            self.showNotif("Passwords do not match")
+
 
 # EXECUTE APP
 if __name__ == "__main__":

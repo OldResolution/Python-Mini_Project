@@ -483,6 +483,9 @@
                      <pointsize>10</pointsize>
                     </font>
                    </property>
+                   <property name="echoMode">
+                    <enum>QLineEdit::Password</enum>
+                   </property>
                    <property name="placeholderText">
                     <string>Password</string>
                    </property>
@@ -649,6 +652,9 @@
                      <pointsize>10</pointsize>
                     </font>
                    </property>
+                   <property name="echoMode">
+                    <enum>QLineEdit::Password</enum>
+                   </property>
                    <property name="placeholderText">
                     <string>Password</string>
                    </property>
@@ -660,6 +666,9 @@
                     <font>
                      <pointsize>10</pointsize>
                     </font>
+                   </property>
+                   <property name="echoMode">
+                    <enum>QLineEdit::Password</enum>
                    </property>
                    <property name="placeholderText">
                     <string>Confirm Password</string>

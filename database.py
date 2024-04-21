@@ -70,7 +70,7 @@ def login(name, passw):
         if user:
             return True, "Login Successful"
         else:
-            return False, "Login Failed"
+            return False, "Login Failed.Incorrect Username or Password entered"
 
     except psycopg2.Error as e:
         return False, f"Error logging in: {e}"

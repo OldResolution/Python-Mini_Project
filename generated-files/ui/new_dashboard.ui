@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <ui version="4.0">
  <class>dashboard_window</class>
  <widget class="QMainWindow" name="dashboard_window">
@@ -31,6 +31,5 @@
    </layout>
   </widget>
  </widget>
- <resources/>
- <connections/>
-</ui>
+ <connections />
+<customwidgets><customwidget><class>QPushButton</class><extends>QPushButton</extends><header location="global">Custom_Widgets.Theme.h</header><container>1</container></customwidget><customwidget><class>QLabel</class><extends>QLabel</extends><header location="global">Custom_Widgets.Theme.h</header><container>1</container></customwidget></customwidgets></ui>

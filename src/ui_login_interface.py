@@ -253,6 +253,7 @@ class Ui_MainWindow(object):
         self.lineEdit_2.setObjectName(u"lineEdit_2")
         self.lineEdit_2.setMinimumSize(QSize(200, 0))
         self.lineEdit_2.setFont(font)
+        self.lineEdit_2.setEchoMode(QLineEdit.Password)
 
         self.verticalLayout_5.addWidget(self.lineEdit_2)
 
@@ -345,12 +346,14 @@ class Ui_MainWindow(object):
         self.r_password = QLineEdit(self.frame_7)
         self.r_password.setObjectName(u"r_password")
         self.r_password.setFont(font)
+        self.r_password.setEchoMode(QLineEdit.Password)
 
         self.verticalLayout_10.addWidget(self.r_password)
 
         self.r_conpasswprd = QLineEdit(self.frame_7)
         self.r_conpasswprd.setObjectName(u"r_conpasswprd")
         self.r_conpasswprd.setFont(font)
+        self.r_conpasswprd.setEchoMode(QLineEdit.Password)
 
         self.verticalLayout_10.addWidget(self.r_conpasswprd)
 
