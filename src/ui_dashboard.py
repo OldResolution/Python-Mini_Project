@@ -17,12 +17,12 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QMainWindow,
     QPushButton, QSizePolicy, QWidget)
-class Ui_dashboard_window(object):
-    def setupUi(self, dashboard_window):
-        if not dashboard_window.objectName():
-            dashboard_window.setObjectName(u"dashboard_window")
-        dashboard_window.resize(800, 600)
-        self.centralwidget = QWidget(dashboard_window)
+class Ui_dashboard(object):
+    def setupUi(self, dashboard):
+        if not dashboard.objectName():
+            dashboard.setObjectName(u"dashboard")
+        dashboard.resize(800, 600)
+        self.centralwidget = QWidget(dashboard)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
@@ -38,15 +38,15 @@ class Ui_dashboard_window(object):
 
         self.horizontalLayout.addWidget(self.widget)
 
-        dashboard_window.setCentralWidget(self.centralwidget)
+        dashboard.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(dashboard_window)
+        self.retranslateUi(dashboard)
 
-        QMetaObject.connectSlotsByName(dashboard_window)
+        QMetaObject.connectSlotsByName(dashboard)
     # setupUi
 
-    def retranslateUi(self, dashboard_window):
-        dashboard_window.setWindowTitle(QCoreApplication.translate("dashboard_window", u"MainWindow", None))
-        self.pushButton.setText(QCoreApplication.translate("dashboard_window", u"PushButton", None))
+    def retranslateUi(self, dashboard):
+        dashboard.setWindowTitle(QCoreApplication.translate("dashboard", u"MainWindow", None))
+        self.pushButton.setText(QCoreApplication.translate("dashboard", u"PushButton", None))
     # retranslateUi
 

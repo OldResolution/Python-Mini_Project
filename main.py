@@ -1,7 +1,8 @@
 # IMPORTS
 import sys
 import os
-
+from PySide6 import *
+from PySide6.QtCore import *
 # IMPORT GUI FILE
 from src.ui_login_interface import *
 from src.ui_dashboard import *
@@ -11,11 +12,12 @@ from database import login, signup_user  # Import login and signup_user function
 from Custom_Widgets import *
 from Custom_Widgets.QAppSettings import QAppSettings
 
+
 # MAIN WINDOW CLASS
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_login()
         self.ui.setupUi(self)
 
         # APPLY JSON STYLESHEET
@@ -36,6 +38,7 @@ class MainWindow(QMainWindow):
         self.ui.notification_slide.expandMenu()
 
     # Function to handle login
+    # Modify the login function in the MainWindow class
     def login(self):
         username = self.ui.lineEdit.text()
         password = self.ui.lineEdit_2.text()
@@ -48,7 +51,12 @@ class MainWindow(QMainWindow):
             self.showNotif("Password is empty")
         else:
             success, message = login(username, password)
-            self.showNotif(message)
+            if success:
+                self.hide()  # Hide the login window
+                self.dashboard = DashboardWindow()  # Create an instance of the dashboard window
+                self.dashboard.show()  # Show the dashboard window
+            else:
+                self.showNotif(message)
 
     # Function to handle signup
     def signup(self):
@@ -73,6 +81,11 @@ class MainWindow(QMainWindow):
             success, message = signup_user(username, password, email)
             self.showNotif(message)
 
+class DashboardWindow(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.ui = Ui_dashboard()
+        self.ui.setupUi(self)
 
 # EXECUTE APP
 if __name__ == "__main__":

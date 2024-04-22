@@ -22,12 +22,12 @@ from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
 from Custom_Widgets.QCustomCheckBox import QCustomCheckBox
 from Custom_Widgets.QCustomQStackedWidget import QCustomQStackedWidget
 from Custom_Widgets.QCustomSlideMenu import QCustomSlideMenu
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(658, 411)
-        self.centralwidget = QWidget(MainWindow)
+class Ui_login(object):
+    def setupUi(self, login):
+        if not login.objectName():
+            login.setObjectName(u"login")
+        login.resize(658, 411)
+        self.centralwidget = QWidget(login)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setCursor(QCursor(Qt.ArrowCursor))
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -432,50 +432,50 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.footer)
 
-        MainWindow.setCentralWidget(self.centralwidget)
+        login.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(login)
 
         self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(0)
 
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(login)
     # setupUi
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+    def retranslateUi(self, login):
+        login.setWindowTitle(QCoreApplication.translate("login", u"MainWindow", None))
 #if QT_CONFIG(accessibility)
-        MainWindow.setAccessibleDescription("")
+        login.setAccessibleDescription("")
 #endif // QT_CONFIG(accessibility)
-        self.notification_txt.setText(QCoreApplication.translate("MainWindow", u"Notification message. Click 'ok' to hide", None))
-        self.close_notification.setText(QCoreApplication.translate("MainWindow", u"OK", None))
+        self.notification_txt.setText(QCoreApplication.translate("login", u"Notification message. Click 'ok' to hide", None))
+        self.close_notification.setText(QCoreApplication.translate("login", u"OK", None))
         self.close_window_button.setText("")
-        self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Hi,Welcome!!</span></p></body></html>", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Enter your details to login or login with social media apps", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Not Registered? Click below to register.", None))
-        self.to_signup.setText(QCoreApplication.translate("MainWindow", u"Sign Up", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Hi,Welcome!!</span></p></body></html>", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Enter your details to register. You can also regsiter using social media apps", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Already Registered? Click below to login.", None))
-        self.to_login.setText(QCoreApplication.translate("MainWindow", u"Login", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Sign In</span></p></body></html>", None))
-        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Username", None))
-        self.lineEdit_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Password", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><a href=\"google.com\"><span style=\" text-decoration: underline; color:#0000ff;\">Forgot your password?</span></a></p></body></html>", None))
-        self.login_button.setText(QCoreApplication.translate("MainWindow", u"Login", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Or Register with socials", None))
+        self.label.setText(QCoreApplication.translate("login", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Hi,Welcome!!</span></p></body></html>", None))
+        self.label_2.setText(QCoreApplication.translate("login", u"Enter your details to login or login with social media apps", None))
+        self.label_3.setText(QCoreApplication.translate("login", u"Not Registered? Click below to register.", None))
+        self.to_signup.setText(QCoreApplication.translate("login", u"Sign Up", None))
+        self.label_7.setText(QCoreApplication.translate("login", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Hi,Welcome!!</span></p></body></html>", None))
+        self.label_8.setText(QCoreApplication.translate("login", u"Enter your details to register. You can also regsiter using social media apps", None))
+        self.label_9.setText(QCoreApplication.translate("login", u"Already Registered? Click below to login.", None))
+        self.to_login.setText(QCoreApplication.translate("login", u"Login", None))
+        self.label_4.setText(QCoreApplication.translate("login", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Sign In</span></p></body></html>", None))
+        self.lineEdit.setPlaceholderText(QCoreApplication.translate("login", u"Username", None))
+        self.lineEdit_2.setPlaceholderText(QCoreApplication.translate("login", u"Password", None))
+        self.label_5.setText(QCoreApplication.translate("login", u"<html><head/><body><p><a href=\"google.com\"><span style=\" text-decoration: underline; color:#0000ff;\">Forgot your password?</span></a></p></body></html>", None))
+        self.login_button.setText(QCoreApplication.translate("login", u"Login", None))
+        self.label_6.setText(QCoreApplication.translate("login", u"Or Register with socials", None))
         self.google.setText("")
         self.github.setText("")
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Sign Up</span></p></body></html>", None))
-        self.r_username.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Username", None))
-        self.r_password.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Password", None))
-        self.r_conpasswprd.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Confirm Password", None))
-        self.r_emailid.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Email ID", None))
-        self.register_button.setText(QCoreApplication.translate("MainWindow", u"Register", None))
-        self.label_12.setText(QCoreApplication.translate("MainWindow", u"Or Register with socials", None))
+        self.label_10.setText(QCoreApplication.translate("login", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Sign Up</span></p></body></html>", None))
+        self.r_username.setPlaceholderText(QCoreApplication.translate("login", u"Username", None))
+        self.r_password.setPlaceholderText(QCoreApplication.translate("login", u"Password", None))
+        self.r_conpasswprd.setPlaceholderText(QCoreApplication.translate("login", u"Confirm Password", None))
+        self.r_emailid.setPlaceholderText(QCoreApplication.translate("login", u"Email ID", None))
+        self.register_button.setText(QCoreApplication.translate("login", u"Register", None))
+        self.label_12.setText(QCoreApplication.translate("login", u"Or Register with socials", None))
         self.google_2.setText("")
         self.github_2.setText("")
-        self.checkBox.setText(QCoreApplication.translate("MainWindow", u"Remember me", None))
+        self.checkBox.setText(QCoreApplication.translate("login", u"Remember me", None))
     # retranslateUi
 
