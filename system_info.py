@@ -1,8 +1,8 @@
 import psutil
 import platform
+import sys
 from datetime import datetime
 import wmi
-
 
 value = [["Memory"],
         ['Graphics Card'],

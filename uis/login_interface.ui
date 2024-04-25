@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>login</class>
+ <widget class="QMainWindow" name="login">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -483,6 +483,9 @@
                      <pointsize>10</pointsize>
                     </font>
                    </property>
+                   <property name="echoMode">
+                    <enum>QLineEdit::Password</enum>
+                   </property>
                    <property name="placeholderText">
                     <string>Password</string>
                    </property>
@@ -573,7 +576,7 @@
                    </property>
                    <property name="icon">
                     <iconset resource="../Qss/icons/_icons.qrc">
-                     <normaloff>:/font_awesome_brands/icons/font_awesome/brands/github.png</normaloff>:/font_awesome_brands/icons/font_awesome/brands/github.png</iconset>
+                     <normaloff>:/feather/icons/feather/facebook.png</normaloff>:/feather/icons/feather/facebook.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -649,6 +652,9 @@
                      <pointsize>10</pointsize>
                     </font>
                    </property>
+                   <property name="echoMode">
+                    <enum>QLineEdit::Password</enum>
+                   </property>
                    <property name="placeholderText">
                     <string>Password</string>
                    </property>
@@ -660,6 +666,9 @@
                     <font>
                      <pointsize>10</pointsize>
                     </font>
+                   </property>
+                   <property name="echoMode">
+                    <enum>QLineEdit::Password</enum>
                    </property>
                    <property name="placeholderText">
                     <string>Confirm Password</string>
@@ -750,7 +759,7 @@
                    </property>
                    <property name="icon">
                     <iconset resource="../Qss/icons/_icons.qrc">
-                     <normaloff>:/font_awesome_brands/icons/font_awesome/brands/github.png</normaloff>:/font_awesome_brands/icons/font_awesome/brands/github.png</iconset>
+                     <normaloff>:/feather/icons/feather/facebook.png</normaloff>:/feather/icons/feather/facebook.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -797,19 +806,6 @@
        <property name="bottomMargin">
         <number>0</number>
        </property>
-       <item alignment="Qt::AlignRight">
-        <widget class="QCustomCheckBox" name="checkBox">
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Remember me</string>
-         </property>
-        </widget>
-       </item>
       </layout>
      </widget>
     </item>
@@ -822,11 +818,6 @@
    <extends>QStackedWidget</extends>
    <header>Custom_Widgets.QCustomQStackedWidget.h</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>QCustomCheckBox</class>
-   <extends>QCheckBox</extends>
-   <header>Custom_Widgets.QCustomCheckBox.h</header>
   </customwidget>
   <customwidget>
    <class>QCustomSlideMenu</class>
