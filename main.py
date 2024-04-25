@@ -87,6 +87,10 @@ class DashboardWindow(QMainWindow):
         self.ui = Ui_dashboard()
         self.ui.setupUi(self)
 
+        loadJsonStyle(self, self.ui, jsonFiles={"json-files/dashboard_style.json"})
+        QAppSettings.updateAppSettings(self)
+        self.show()
+
 # EXECUTE APP
 if __name__ == "__main__":
     app = QApplication(sys.argv)

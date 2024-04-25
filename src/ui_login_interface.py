@@ -19,7 +19,6 @@ from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
     QLineEdit, QMainWindow, QPushButton, QSizePolicy,
     QVBoxLayout, QWidget)
 
-from Custom_Widgets.QCustomCheckBox import QCustomCheckBox
 from Custom_Widgets.QCustomQStackedWidget import QCustomQStackedWidget
 from Custom_Widgets.QCustomSlideMenu import QCustomSlideMenu
 class Ui_login(object):
@@ -301,7 +300,7 @@ class Ui_login(object):
         self.github.setObjectName(u"github")
         self.github.setCursor(QCursor(Qt.PointingHandCursor))
         icon3 = QIcon()
-        icon3.addFile(u":/font_awesome_brands/icons/font_awesome/brands/github.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u":/feather/icons/feather/facebook.png", QSize(), QIcon.Normal, QIcon.Off)
         self.github.setIcon(icon3)
         self.github.setIconSize(QSize(24, 24))
 
@@ -423,12 +422,6 @@ class Ui_login(object):
         self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.horizontalLayout_5.setContentsMargins(20, 0, 0, 0)
-        self.checkBox = QCustomCheckBox(self.footer)
-        self.checkBox.setObjectName(u"checkBox")
-        self.checkBox.setMinimumSize(QSize(150, 0))
-
-        self.horizontalLayout_5.addWidget(self.checkBox, 0, Qt.AlignRight)
-
 
         self.verticalLayout.addWidget(self.footer)
 
@@ -476,6 +469,5 @@ class Ui_login(object):
         self.label_12.setText(QCoreApplication.translate("login", u"Or Register with socials", None))
         self.google_2.setText("")
         self.github_2.setText("")
-        self.checkBox.setText(QCoreApplication.translate("login", u"Remember me", None))
     # retranslateUi
 
