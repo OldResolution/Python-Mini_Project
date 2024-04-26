@@ -1,9 +1,0 @@
-PySide6~=6.6.3.1
-reportlab~=4.2.0
-psycopg2~=2.9.9
-psutil~=5.9.8
-WMI~=1.5.1
-PyQt5
-QT-PyQt-PySide-Custom-Widget
-#install GTK3runtime from https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer.git
-
