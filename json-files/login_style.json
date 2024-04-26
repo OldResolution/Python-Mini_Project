@@ -23,7 +23,8 @@
               "Text-color": "#333333",
               "Accent-color": "#008080",
               "Icons-color": "#333333",
-              "Theme-name": "Modern Teal Slate"
+              "Theme-name": "Modern Teal Slate",
+              "Default-Theme": true
             }
           ]
         }
