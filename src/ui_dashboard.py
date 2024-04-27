@@ -15,16 +15,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGraphicsView, QHBoxLayout,
-    QHeaderView, QLabel, QLineEdit, QMainWindow,
-    QProgressBar, QPushButton, QSizePolicy, QSpacerItem,
-    QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QLineEdit, QMainWindow, QProgressBar, QPushButton,
+    QSizePolicy, QSpacerItem, QStackedWidget, QVBoxLayout,
     QWidget)
 class Ui_dashboard(object):
     def setupUi(self, dashboard):
         if not dashboard.objectName():
             dashboard.setObjectName(u"dashboard")
-        dashboard.resize(843, 616)
+        dashboard.resize(849, 616)
         dashboard.setStyleSheet(u"")
         self.centralwidget = QWidget(dashboard)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -79,6 +78,11 @@ class Ui_dashboard(object):
         self.verticalLayout_3.setContentsMargins(0, 10, 0, 10)
         self.Homebutton = QPushButton(self.frame_2)
         self.Homebutton.setObjectName(u"Homebutton")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.Homebutton.sizePolicy().hasHeightForWidth())
+        self.Homebutton.setSizePolicy(sizePolicy1)
         self.Homebutton.setStyleSheet(u"")
         icon1 = QIcon()
         icon1.addFile(u":/feather/icons/feather/home.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -87,23 +91,14 @@ class Ui_dashboard(object):
 
         self.verticalLayout_3.addWidget(self.Homebutton)
 
-        self.Reportsbutton = QPushButton(self.frame_2)
-        self.Reportsbutton.setObjectName(u"Reportsbutton")
+        self.SettingsButton = QPushButton(self.frame_2)
+        self.SettingsButton.setObjectName(u"SettingsButton")
         icon2 = QIcon()
-        icon2.addFile(u":/feather/icons/feather/file-text.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.Reportsbutton.setIcon(icon2)
-        self.Reportsbutton.setIconSize(QSize(24, 24))
+        icon2.addFile(u":/feather/icons/feather/chevrons-left.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.SettingsButton.setIcon(icon2)
+        self.SettingsButton.setIconSize(QSize(24, 24))
 
-        self.verticalLayout_3.addWidget(self.Reportsbutton)
-
-        self.MailsButton = QPushButton(self.frame_2)
-        self.MailsButton.setObjectName(u"MailsButton")
-        icon3 = QIcon()
-        icon3.addFile(u":/feather/icons/feather/inbox.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.MailsButton.setIcon(icon3)
-        self.MailsButton.setIconSize(QSize(24, 24))
-
-        self.verticalLayout_3.addWidget(self.MailsButton)
+        self.verticalLayout_3.addWidget(self.SettingsButton)
 
 
         self.verticalLayout_2.addWidget(self.frame_2, 0, Qt.AlignTop)
@@ -120,29 +115,20 @@ class Ui_dashboard(object):
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.verticalLayout_4.setContentsMargins(0, 10, 0, 10)
-        self.SettingsButton = QPushButton(self.frame_3)
-        self.SettingsButton.setObjectName(u"SettingsButton")
-        icon4 = QIcon()
-        icon4.addFile(u":/feather/icons/feather/settings.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.SettingsButton.setIcon(icon4)
-        self.SettingsButton.setIconSize(QSize(24, 24))
-
-        self.verticalLayout_4.addWidget(self.SettingsButton)
-
         self.InfoButton = QPushButton(self.frame_3)
         self.InfoButton.setObjectName(u"InfoButton")
-        icon5 = QIcon()
-        icon5.addFile(u":/feather/icons/feather/info.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.InfoButton.setIcon(icon5)
+        icon3 = QIcon()
+        icon3.addFile(u":/feather/icons/feather/info.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.InfoButton.setIcon(icon3)
         self.InfoButton.setIconSize(QSize(24, 24))
 
         self.verticalLayout_4.addWidget(self.InfoButton)
 
         self.LogoutButton = QPushButton(self.frame_3)
         self.LogoutButton.setObjectName(u"LogoutButton")
-        icon6 = QIcon()
-        icon6.addFile(u":/material_design/icons/material_design/logout.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.LogoutButton.setIcon(icon6)
+        icon4 = QIcon()
+        icon4.addFile(u":/material_design/icons/material_design/logout.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.LogoutButton.setIcon(icon4)
         self.LogoutButton.setIconSize(QSize(24, 24))
 
         self.verticalLayout_4.addWidget(self.LogoutButton)
@@ -182,9 +168,9 @@ class Ui_dashboard(object):
 
         self.pushButton_2 = QPushButton(self.frame_4)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        icon7 = QIcon()
-        icon7.addFile(u":/feather/icons/feather/x-circle.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_2.setIcon(icon7)
+        icon5 = QIcon()
+        icon5.addFile(u":/feather/icons/feather/x-circle.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_2.setIcon(icon5)
         self.pushButton_2.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_4.addWidget(self.pushButton_2, 0, Qt.AlignRight)
@@ -194,30 +180,18 @@ class Ui_dashboard(object):
 
         self.stackedWidget = QStackedWidget(self.CenterMenuSubContainer)
         self.stackedWidget.setObjectName(u"stackedWidget")
-        self.page = QWidget()
-        self.page.setObjectName(u"page")
-        self.verticalLayout_7 = QVBoxLayout(self.page)
-        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.Mails = QLabel(self.page)
-        self.Mails.setObjectName(u"Mails")
-        font = QFont()
-        font.setPointSize(13)
-        self.Mails.setFont(font)
-        self.Mails.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_7.addWidget(self.Mails)
-
-        self.stackedWidget.addWidget(self.page)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
         self.verticalLayout_8 = QVBoxLayout(self.page_2)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
-        self.Settings = QLabel(self.page_2)
-        self.Settings.setObjectName(u"Settings")
-        self.Settings.setFont(font)
-        self.Settings.setAlignment(Qt.AlignCenter)
+        self.PastSearches = QLabel(self.page_2)
+        self.PastSearches.setObjectName(u"PastSearches")
+        font = QFont()
+        font.setPointSize(13)
+        self.PastSearches.setFont(font)
+        self.PastSearches.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_8.addWidget(self.Settings)
+        self.verticalLayout_8.addWidget(self.PastSearches)
 
         self.stackedWidget.addWidget(self.page_2)
         self.page_3 = QWidget()
@@ -243,21 +217,21 @@ class Ui_dashboard(object):
 
         self.MainBodyContainer = QWidget(self.centralwidget)
         self.MainBodyContainer.setObjectName(u"MainBodyContainer")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.MainBodyContainer.sizePolicy().hasHeightForWidth())
-        self.MainBodyContainer.setSizePolicy(sizePolicy1)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.MainBodyContainer.sizePolicy().hasHeightForWidth())
+        self.MainBodyContainer.setSizePolicy(sizePolicy2)
         self.MainBodyContainer.setStyleSheet(u"")
         self.verticalLayout_10 = QVBoxLayout(self.MainBodyContainer)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
         self.TitleBar = QWidget(self.MainBodyContainer)
         self.TitleBar.setObjectName(u"TitleBar")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.TitleBar.sizePolicy().hasHeightForWidth())
-        self.TitleBar.setSizePolicy(sizePolicy2)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.TitleBar.sizePolicy().hasHeightForWidth())
+        self.TitleBar.setSizePolicy(sizePolicy3)
         self.TitleBar.setMinimumSize(QSize(0, 0))
         self.horizontalLayout_7 = QHBoxLayout(self.TitleBar)
         self.horizontalLayout_7.setSpacing(0)
@@ -278,42 +252,42 @@ class Ui_dashboard(object):
 
         self.widget = QWidget(self.TitleBar)
         self.widget.setObjectName(u"widget")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.widget.sizePolicy().hasHeightForWidth())
-        self.widget.setSizePolicy(sizePolicy3)
-        self.horizontalLayout_11 = QHBoxLayout(self.widget)
-        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
-        self.pushButton_5 = QPushButton(self.widget)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        icon8 = QIcon()
-        icon8.addFile(u":/feather/icons/feather/window_minimize.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_5.setIcon(icon8)
-
-        self.horizontalLayout_11.addWidget(self.pushButton_5)
-
-        self.pushButton_4 = QPushButton(self.widget)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        icon9 = QIcon()
-        icon9.addFile(u":/feather/icons/feather/square.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_4.setIcon(icon9)
-
-        self.horizontalLayout_11.addWidget(self.pushButton_4)
-
-        self.pushButton_3 = QPushButton(self.widget)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
         sizePolicy4.setHorizontalStretch(0)
         sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
-        self.pushButton_3.setSizePolicy(sizePolicy4)
-        self.pushButton_3.setMinimumSize(QSize(0, 10))
-        icon10 = QIcon()
-        icon10.addFile(u":/feather/icons/feather/x.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_3.setIcon(icon10)
+        sizePolicy4.setHeightForWidth(self.widget.sizePolicy().hasHeightForWidth())
+        self.widget.setSizePolicy(sizePolicy4)
+        self.horizontalLayout_11 = QHBoxLayout(self.widget)
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
+        self.Minimize_window = QPushButton(self.widget)
+        self.Minimize_window.setObjectName(u"Minimize_window")
+        icon6 = QIcon()
+        icon6.addFile(u":/feather/icons/feather/window_minimize.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Minimize_window.setIcon(icon6)
 
-        self.horizontalLayout_11.addWidget(self.pushButton_3)
+        self.horizontalLayout_11.addWidget(self.Minimize_window)
+
+        self.Maximize_window = QPushButton(self.widget)
+        self.Maximize_window.setObjectName(u"Maximize_window")
+        icon7 = QIcon()
+        icon7.addFile(u":/feather/icons/feather/square.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Maximize_window.setIcon(icon7)
+
+        self.horizontalLayout_11.addWidget(self.Maximize_window)
+
+        self.Close_window = QPushButton(self.widget)
+        self.Close_window.setObjectName(u"Close_window")
+        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.Close_window.sizePolicy().hasHeightForWidth())
+        self.Close_window.setSizePolicy(sizePolicy5)
+        self.Close_window.setMinimumSize(QSize(0, 10))
+        icon8 = QIcon()
+        icon8.addFile(u":/feather/icons/feather/x.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Close_window.setIcon(icon8)
+
+        self.horizontalLayout_11.addWidget(self.Close_window)
 
 
         self.horizontalLayout_7.addWidget(self.widget, 0, Qt.AlignRight)
@@ -329,8 +303,8 @@ class Ui_dashboard(object):
         self.stackedWidget_2.setObjectName(u"stackedWidget_2")
         self.HomeMain = QWidget()
         self.HomeMain.setObjectName(u"HomeMain")
-        self.verticalLayout_14 = QVBoxLayout(self.HomeMain)
-        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
+        self.verticalLayout_7 = QVBoxLayout(self.HomeMain)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.headerContainer = QWidget(self.HomeMain)
         self.headerContainer.setObjectName(u"headerContainer")
         sizePolicy.setHeightForWidth(self.headerContainer.sizePolicy().hasHeightForWidth())
@@ -352,19 +326,19 @@ class Ui_dashboard(object):
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
         self.searchBar = QLineEdit(self.frame_6)
         self.searchBar.setObjectName(u"searchBar")
-        sizePolicy3.setHeightForWidth(self.searchBar.sizePolicy().hasHeightForWidth())
-        self.searchBar.setSizePolicy(sizePolicy3)
+        sizePolicy4.setHeightForWidth(self.searchBar.sizePolicy().hasHeightForWidth())
+        self.searchBar.setSizePolicy(sizePolicy4)
         self.searchBar.setMinimumSize(QSize(0, 0))
 
         self.horizontalLayout_10.addWidget(self.searchBar)
 
         self.pushButton = QPushButton(self.frame_6)
         self.pushButton.setObjectName(u"pushButton")
-        sizePolicy3.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy3)
-        icon11 = QIcon()
-        icon11.addFile(u":/feather/icons/feather/search.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton.setIcon(icon11)
+        sizePolicy4.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
+        self.pushButton.setSizePolicy(sizePolicy4)
+        icon9 = QIcon()
+        icon9.addFile(u":/feather/icons/feather/search.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton.setIcon(icon9)
 
         self.horizontalLayout_10.addWidget(self.pushButton)
 
@@ -372,11 +346,11 @@ class Ui_dashboard(object):
         self.horizontalLayout_9.addWidget(self.frame_6, 0, Qt.AlignRight)
 
 
-        self.verticalLayout_14.addWidget(self.headerContainer)
+        self.verticalLayout_7.addWidget(self.headerContainer)
 
-        self.searchBarspace = QSpacerItem(20, 5, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        self.ResultSpace = QSpacerItem(10, 10, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
 
-        self.verticalLayout_14.addItem(self.searchBarspace)
+        self.verticalLayout_7.addItem(self.ResultSpace)
 
         self.progressGame = QWidget(self.HomeMain)
         self.progressGame.setObjectName(u"progressGame")
@@ -397,11 +371,7 @@ class Ui_dashboard(object):
         self.verticalLayout_12.addWidget(self.Searchprogress)
 
 
-        self.verticalLayout_14.addWidget(self.progressGame)
-
-        self.tableSpace = QSpacerItem(20, 5, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
-
-        self.verticalLayout_14.addItem(self.tableSpace)
+        self.verticalLayout_7.addWidget(self.progressGame)
 
         self.mainBodyContent = QWidget(self.HomeMain)
         self.mainBodyContent.setObjectName(u"mainBodyContent")
@@ -415,11 +385,11 @@ class Ui_dashboard(object):
         self.widget_3 = QWidget(self.mainBodyContent)
         self.widget_3.setObjectName(u"widget_3")
         self.widget_3.setEnabled(True)
-        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.widget_3.sizePolicy().hasHeightForWidth())
-        self.widget_3.setSizePolicy(sizePolicy5)
+        sizePolicy6 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.widget_3.sizePolicy().hasHeightForWidth())
+        self.widget_3.setSizePolicy(sizePolicy6)
         self.widget_3.setMinimumSize(QSize(500, 0))
         self.widget_3.setSizeIncrement(QSize(0, 0))
         self.verticalLayout_11 = QVBoxLayout(self.widget_3)
@@ -566,11 +536,11 @@ class Ui_dashboard(object):
         self.horizontalLayout_5.addWidget(self.widget_6)
 
 
-        self.verticalLayout_14.addWidget(self.mainBodyContent)
+        self.verticalLayout_7.addWidget(self.mainBodyContent)
 
-        self.ResultSpace = QSpacerItem(20, 10, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        self.searchBarspace = QSpacerItem(10, 10, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
 
-        self.verticalLayout_14.addItem(self.ResultSpace)
+        self.verticalLayout_7.addItem(self.searchBarspace)
 
         self.State = QWidget(self.HomeMain)
         self.State.setObjectName(u"State")
@@ -586,90 +556,57 @@ class Ui_dashboard(object):
         self.horizontalLayout_3.addWidget(self.label_3, 0, Qt.AlignRight)
 
 
-        self.verticalLayout_14.addWidget(self.State)
+        self.verticalLayout_7.addWidget(self.State)
 
         self.stackedWidget_2.addWidget(self.HomeMain)
-        self.SettingsMain = QWidget()
-        self.SettingsMain.setObjectName(u"SettingsMain")
-        self.horizontalLayout_6 = QHBoxLayout(self.SettingsMain)
+        self.InformationMain = QWidget()
+        self.InformationMain.setObjectName(u"InformationMain")
+        self.horizontalLayout_6 = QHBoxLayout(self.InformationMain)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.stackedWidget_3 = QStackedWidget(self.SettingsMain)
-        self.stackedWidget_3.setObjectName(u"stackedWidget_3")
-        self.CPU_info = QWidget()
-        self.CPU_info.setObjectName(u"CPU_info")
-        self.stackedWidget_3.addWidget(self.CPU_info)
-        self.Sensors_info = QWidget()
-        self.Sensors_info.setObjectName(u"Sensors_info")
-        self.stackedWidget_3.addWidget(self.Sensors_info)
-        self.System_info = QWidget()
-        self.System_info.setObjectName(u"System_info")
-        self.stackedWidget_3.addWidget(self.System_info)
-        self.Activity_info = QWidget()
-        self.Activity_info.setObjectName(u"Activity_info")
-        self.stackedWidget_3.addWidget(self.Activity_info)
-        self.Network_info = QWidget()
-        self.Network_info.setObjectName(u"Network_info")
-        self.stackedWidget_3.addWidget(self.Network_info)
-        self.Battery_Info = QWidget()
-        self.Battery_Info.setObjectName(u"Battery_Info")
-        self.stackedWidget_3.addWidget(self.Battery_Info)
-        self.Storage_info = QWidget()
-        self.Storage_info.setObjectName(u"Storage_info")
-        self.stackedWidget_3.addWidget(self.Storage_info)
-
-        self.horizontalLayout_6.addWidget(self.stackedWidget_3)
-
-        self.stackedWidget_2.addWidget(self.SettingsMain)
-        self.ReportsMain = QWidget()
-        self.ReportsMain.setObjectName(u"ReportsMain")
-        self.verticalLayout_15 = QVBoxLayout(self.ReportsMain)
-        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
-        self.PreviousSearches = QWidget(self.ReportsMain)
-        self.PreviousSearches.setObjectName(u"PreviousSearches")
-        self.verticalLayout_18 = QVBoxLayout(self.PreviousSearches)
-        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
-        self.tableWidget_2 = QTableWidget(self.PreviousSearches)
-        self.tableWidget_2.setObjectName(u"tableWidget_2")
-        self.tableWidget_2.horizontalHeader().setVisible(False)
-        self.tableWidget_2.horizontalHeader().setCascadingSectionResizes(False)
-        self.tableWidget_2.horizontalHeader().setMinimumSectionSize(0)
-        self.tableWidget_2.horizontalHeader().setDefaultSectionSize(32)
-        self.tableWidget_2.horizontalHeader().setHighlightSections(False)
-        self.tableWidget_2.horizontalHeader().setProperty("showSortIndicator", False)
-        self.tableWidget_2.horizontalHeader().setStretchLastSection(False)
-        self.tableWidget_2.verticalHeader().setVisible(True)
-        self.tableWidget_2.verticalHeader().setCascadingSectionResizes(False)
-        self.tableWidget_2.verticalHeader().setMinimumSectionSize(0)
-        self.tableWidget_2.verticalHeader().setDefaultSectionSize(24)
-        self.tableWidget_2.verticalHeader().setHighlightSections(True)
-        self.tableWidget_2.verticalHeader().setProperty("showSortIndicator", False)
-        self.tableWidget_2.verticalHeader().setStretchLastSection(False)
-
-        self.verticalLayout_18.addWidget(self.tableWidget_2)
-
-
-        self.verticalLayout_15.addWidget(self.PreviousSearches, 0, Qt.AlignTop)
-
-        self.ReportPreview = QWidget(self.ReportsMain)
-        self.ReportPreview.setObjectName(u"ReportPreview")
-        self.horizontalLayout_18 = QHBoxLayout(self.ReportPreview)
-        self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
-        self.widget_5 = QWidget(self.ReportPreview)
+        self.widget_5 = QWidget(self.InformationMain)
         self.widget_5.setObjectName(u"widget_5")
-        self.horizontalLayout_19 = QHBoxLayout(self.widget_5)
-        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
-        self.graphicsView = QGraphicsView(self.widget_5)
-        self.graphicsView.setObjectName(u"graphicsView")
+        self.verticalLayout_14 = QVBoxLayout(self.widget_5)
+        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
+        self.label_4 = QLabel(self.widget_5)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_19.addWidget(self.graphicsView)
+        self.verticalLayout_14.addWidget(self.label_4)
+
+        self.label_5 = QLabel(self.widget_5)
+        self.label_5.setObjectName(u"label_5")
+
+        self.verticalLayout_14.addWidget(self.label_5)
+
+        self.label_6 = QLabel(self.widget_5)
+        self.label_6.setObjectName(u"label_6")
+
+        self.verticalLayout_14.addWidget(self.label_6)
+
+        self.label_7 = QLabel(self.widget_5)
+        self.label_7.setObjectName(u"label_7")
+
+        self.verticalLayout_14.addWidget(self.label_7)
+
+        self.label_8 = QLabel(self.widget_5)
+        self.label_8.setObjectName(u"label_8")
+
+        self.verticalLayout_14.addWidget(self.label_8)
+
+        self.label_9 = QLabel(self.widget_5)
+        self.label_9.setObjectName(u"label_9")
+
+        self.verticalLayout_14.addWidget(self.label_9)
+
+        self.label_10 = QLabel(self.widget_5)
+        self.label_10.setObjectName(u"label_10")
+
+        self.verticalLayout_14.addWidget(self.label_10)
 
 
-        self.horizontalLayout_18.addWidget(self.widget_5)
+        self.horizontalLayout_6.addWidget(self.widget_5)
 
-
-        self.verticalLayout_15.addWidget(self.ReportPreview)
-
-        self.stackedWidget_2.addWidget(self.ReportsMain)
+        self.stackedWidget_2.addWidget(self.InformationMain)
 
         self.horizontalLayout_8.addWidget(self.stackedWidget_2)
 
@@ -683,9 +620,8 @@ class Ui_dashboard(object):
 
         self.retranslateUi(dashboard)
 
-        self.stackedWidget.setCurrentIndex(1)
-        self.stackedWidget_2.setCurrentIndex(0)
-        self.stackedWidget_3.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget_2.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(dashboard)
@@ -702,17 +638,9 @@ class Ui_dashboard(object):
 #endif // QT_CONFIG(tooltip)
         self.Homebutton.setText(QCoreApplication.translate("dashboard", u"Home", None))
 #if QT_CONFIG(tooltip)
-        self.Reportsbutton.setToolTip(QCoreApplication.translate("dashboard", u"Reports", None))
-#endif // QT_CONFIG(tooltip)
-        self.Reportsbutton.setText(QCoreApplication.translate("dashboard", u"Reports", None))
-#if QT_CONFIG(tooltip)
-        self.MailsButton.setToolTip(QCoreApplication.translate("dashboard", u"Mails", None))
-#endif // QT_CONFIG(tooltip)
-        self.MailsButton.setText(QCoreApplication.translate("dashboard", u"Mails", None))
-#if QT_CONFIG(tooltip)
         self.SettingsButton.setToolTip(QCoreApplication.translate("dashboard", u"Go to Settings", None))
 #endif // QT_CONFIG(tooltip)
-        self.SettingsButton.setText(QCoreApplication.translate("dashboard", u"Settings", None))
+        self.SettingsButton.setText(QCoreApplication.translate("dashboard", u"Past Searches", None))
 #if QT_CONFIG(tooltip)
         self.InfoButton.setToolTip(QCoreApplication.translate("dashboard", u"Access to more Information", None))
 #endif // QT_CONFIG(tooltip)
@@ -723,13 +651,12 @@ class Ui_dashboard(object):
         self.LogoutButton.setText(QCoreApplication.translate("dashboard", u"Logout", None))
         self.label_2.setText(QCoreApplication.translate("dashboard", u"More Menu", None))
         self.pushButton_2.setText("")
-        self.Mails.setText(QCoreApplication.translate("dashboard", u"Mails", None))
-        self.Settings.setText(QCoreApplication.translate("dashboard", u"Settings", None))
+        self.PastSearches.setText(QCoreApplication.translate("dashboard", u"PastSearches", None))
         self.Information.setText(QCoreApplication.translate("dashboard", u"Information", None))
         self.label.setText(QCoreApplication.translate("dashboard", u"AppName", None))
-        self.pushButton_5.setText("")
-        self.pushButton_4.setText("")
-        self.pushButton_3.setText("")
+        self.Minimize_window.setText("")
+        self.Maximize_window.setText("")
+        self.Close_window.setText("")
         self.pushButton.setText("")
         self.GameName.setText(QCoreApplication.translate("dashboard", u"GAME NAME", None))
         self.OS.setText(QCoreApplication.translate("dashboard", u"Operating System", None))
@@ -743,5 +670,12 @@ class Ui_dashboard(object):
         self.pushButton_9.setText("")
         self.pushButton_10.setText("")
         self.label_3.setText(QCoreApplication.translate("dashboard", u"Compatiblity Status", None))
+        self.label_4.setText(QCoreApplication.translate("dashboard", u"System Details", None))
+        self.label_5.setText(QCoreApplication.translate("dashboard", u"TextLabel", None))
+        self.label_6.setText(QCoreApplication.translate("dashboard", u"TextLabel", None))
+        self.label_7.setText(QCoreApplication.translate("dashboard", u"TextLabel", None))
+        self.label_8.setText(QCoreApplication.translate("dashboard", u"TextLabel", None))
+        self.label_9.setText(QCoreApplication.translate("dashboard", u"TextLabel", None))
+        self.label_10.setText(QCoreApplication.translate("dashboard", u"TextLabel", None))
     # retranslateUi
 
