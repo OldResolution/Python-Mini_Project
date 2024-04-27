@@ -3,14 +3,7 @@
     {
       "tittle": "Login and signup",
       "icon": ":/font_awesome_brands/icons/font_awesome/brands/windows.png",
-      "frameless": true,
-      "transluscentBg": true,
-      "navigation": [
-        {
-          "close": "close_window_button",
-          "moveWindow": "header"
-        }
-      ]
+      "transluscentBg": true
     }
   ],
   "QSettings": [

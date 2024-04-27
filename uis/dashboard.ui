@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>843</width>
+    <width>849</width>
     <height>616</height>
    </rect>
   </property>
@@ -148,6 +148,12 @@
              </property>
              <item>
               <widget class="QPushButton" name="Homebutton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="toolTip">
                 <string>Home</string>
                </property>
@@ -170,36 +176,16 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="Reportsbutton">
+              <widget class="QPushButton" name="SettingsButton">
                <property name="toolTip">
-                <string>Reports</string>
+                <string>Go to Settings</string>
                </property>
                <property name="text">
-                <string>Reports</string>
+                <string>Past Searches</string>
                </property>
                <property name="icon">
                 <iconset resource="../Qss/icons/_icons.qrc">
-                 <normaloff>:/feather/icons/feather/file-text.png</normaloff>:/feather/icons/feather/file-text.png</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>24</width>
-                 <height>24</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="MailsButton">
-               <property name="toolTip">
-                <string>Mails</string>
-               </property>
-               <property name="text">
-                <string>Mails</string>
-               </property>
-               <property name="icon">
-                <iconset resource="../Qss/icons/_icons.qrc">
-                 <normaloff>:/feather/icons/feather/inbox.png</normaloff>:/feather/icons/feather/inbox.png</iconset>
+                 <normaloff>:/feather/icons/feather/chevrons-left.png</normaloff>:/feather/icons/feather/chevrons-left.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -249,26 +235,6 @@
              <property name="bottomMargin">
               <number>10</number>
              </property>
-             <item>
-              <widget class="QPushButton" name="SettingsButton">
-               <property name="toolTip">
-                <string>Go to Settings</string>
-               </property>
-               <property name="text">
-                <string>Settings</string>
-               </property>
-               <property name="icon">
-                <iconset resource="../Qss/icons/_icons.qrc">
-                 <normaloff>:/feather/icons/feather/settings.png</normaloff>:/feather/icons/feather/settings.png</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>24</width>
-                 <height>24</height>
-                </size>
-               </property>
-              </widget>
-             </item>
              <item>
               <widget class="QPushButton" name="InfoButton">
                <property name="toolTip">
@@ -396,38 +362,19 @@
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
-            <widget class="QWidget" name="page">
-             <layout class="QVBoxLayout" name="verticalLayout_7">
-              <item>
-               <widget class="QLabel" name="Mails">
-                <property name="font">
-                 <font>
-                  <pointsize>13</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Mails</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
             <widget class="QWidget" name="page_2">
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <item>
-               <widget class="QLabel" name="Settings">
+               <widget class="QLabel" name="PastSearches">
                 <property name="font">
                  <font>
                   <pointsize>13</pointsize>
                  </font>
                 </property>
                 <property name="text">
-                 <string>Settings</string>
+                 <string>PastSearches</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -524,63 +471,6 @@
             </layout>
            </widget>
           </item>
-          <item alignment="Qt::AlignRight">
-           <widget class="QWidget" name="widget" native="true">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_11">
-             <item>
-              <widget class="QPushButton" name="pushButton_5">
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset resource="../Qss/icons/_icons.qrc">
-                 <normaloff>:/feather/icons/feather/window_minimize.png</normaloff>:/feather/icons/feather/window_minimize.png</iconset>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_4">
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset resource="../Qss/icons/_icons.qrc">
-                 <normaloff>:/feather/icons/feather/square.png</normaloff>:/feather/icons/feather/square.png</iconset>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_3">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>10</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset resource="../Qss/icons/_icons.qrc">
-                 <normaloff>:/feather/icons/feather/x.png</normaloff>:/feather/icons/feather/x.png</iconset>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
          </layout>
         </widget>
        </item>
@@ -593,7 +483,7 @@
              <number>0</number>
             </property>
             <widget class="QWidget" name="HomeMain">
-             <layout class="QVBoxLayout" name="verticalLayout_14">
+             <layout class="QVBoxLayout" name="verticalLayout_7">
               <item>
                <widget class="QWidget" name="headerContainer" native="true">
                 <property name="sizePolicy">
@@ -688,7 +578,7 @@
                </widget>
               </item>
               <item>
-               <spacer name="searchBarspace">
+               <spacer name="ResultSpace">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -697,8 +587,8 @@
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
-                  <width>20</width>
-                  <height>5</height>
+                  <width>10</width>
+                  <height>10</height>
                  </size>
                 </property>
                </spacer>
@@ -743,22 +633,6 @@
                  </item>
                 </layout>
                </widget>
-              </item>
-              <item>
-               <spacer name="tableSpace">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>5</height>
-                 </size>
-                </property>
-               </spacer>
               </item>
               <item>
                <widget class="QWidget" name="mainBodyContent" native="true">
@@ -1017,7 +891,7 @@
                </widget>
               </item>
               <item>
-               <spacer name="ResultSpace">
+               <spacer name="searchBarspace">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -1026,7 +900,7 @@
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
-                  <width>20</width>
+                  <width>10</width>
                   <height>10</height>
                  </size>
                 </property>
@@ -1071,88 +945,61 @@
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="SettingsMain">
+            <widget class="QWidget" name="InformationMain">
              <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
-               <widget class="QStackedWidget" name="stackedWidget_3">
-                <property name="currentIndex">
-                 <number>2</number>
-                </property>
-                <widget class="QWidget" name="CPU_info"/>
-                <widget class="QWidget" name="Sensors_info"/>
-                <widget class="QWidget" name="System_info"/>
-                <widget class="QWidget" name="Activity_info"/>
-                <widget class="QWidget" name="Network_info"/>
-                <widget class="QWidget" name="Battery_Info"/>
-                <widget class="QWidget" name="Storage_info"/>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="ReportsMain">
-             <layout class="QVBoxLayout" name="verticalLayout_15">
-              <item alignment="Qt::AlignTop">
-               <widget class="QWidget" name="PreviousSearches" native="true">
-                <layout class="QVBoxLayout" name="verticalLayout_18">
+               <widget class="QWidget" name="widget_5" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_14">
                  <item>
-                  <widget class="QTableWidget" name="tableWidget_2">
-                   <attribute name="horizontalHeaderVisible">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="horizontalHeaderCascadingSectionResizes">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="horizontalHeaderMinimumSectionSize">
-                    <number>0</number>
-                   </attribute>
-                   <attribute name="horizontalHeaderDefaultSectionSize">
-                    <number>32</number>
-                   </attribute>
-                   <attribute name="horizontalHeaderHighlightSections">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="horizontalHeaderStretchLastSection">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="verticalHeaderVisible">
-                    <bool>true</bool>
-                   </attribute>
-                   <attribute name="verticalHeaderCascadingSectionResizes">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="verticalHeaderMinimumSectionSize">
-                    <number>0</number>
-                   </attribute>
-                   <attribute name="verticalHeaderDefaultSectionSize">
-                    <number>24</number>
-                   </attribute>
-                   <attribute name="verticalHeaderHighlightSections">
-                    <bool>true</bool>
-                   </attribute>
-                   <attribute name="verticalHeaderShowSortIndicator" stdset="0">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="verticalHeaderStretchLastSection">
-                    <bool>false</bool>
-                   </attribute>
+                  <widget class="QLabel" name="label_4">
+                   <property name="text">
+                    <string>System Details</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
                   </widget>
                  </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="ReportPreview" native="true">
-                <layout class="QHBoxLayout" name="horizontalLayout_18">
                  <item>
-                  <widget class="QWidget" name="widget_5" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_19">
-                    <item>
-                     <widget class="QGraphicsView" name="graphicsView"/>
-                    </item>
-                   </layout>
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_9">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_10">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
                   </widget>
                  </item>
                 </layout>

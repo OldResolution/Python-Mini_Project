@@ -35,5 +35,91 @@
         "OrginizationDormain": "Modern UI.org"
       }
     }
-  ]
+  ],
+  "QCustomQStackedWidget": [
+    {
+      "name": "stackedWidget",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "to_signup": "welcome_signup_pg",
+              "to_login": "welcome_login_pg"
+            }
+          ]
+        }
+      ],
+      "transitionAnimation": [
+        {
+          "slide": [
+            {
+              "active": true,
+              "duration": 1000,
+              "direction": "horizontal",
+              "easingCurve": "Linear"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stackedWidget_2",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "to_signup": "signup_pg",
+              "to_login": "login_pg"
+            }
+          ]
+        }
+      ],
+      "transitionAnimation": [
+        {
+          "slide": [
+            {
+              "active": true,
+              "duration": 1000,
+              "direction": "vertical",
+              "easingCurve": "Linear"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+    "QCustomSlideMenu": [
+        {
+            "name": "notification_slide",
+            "defaultSize": [
+                {
+                    "width": 600,
+                    "height": 40
+                }
+            ],
+            "collapsedSize": [
+                {
+                    "width": 600,
+                    "height": 0
+                }
+            ],
+            "expandedSize": [
+                {
+                    "width": 600,
+                    "height": "auto"
+                }
+            ],
+            "toggleButton": [
+              {
+                "buttonName": "close_notification"
+              }
+            ],
+            "menuTransitionAnimation": [
+                {
+                    "animationDuration": 500,
+                    "animationEasingCurve": "Linear"
+                }
+            ]
+        }
+    ]
 }
