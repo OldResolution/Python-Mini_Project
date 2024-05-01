@@ -23,7 +23,8 @@
               "Text-color": "#333333",
               "Accent-color": "#008080",
               "Icons-color": "#333333",
-              "Theme-name": "Modern Teal Slate"
+              "Theme-name": "Modern Teal Slate",
+              "Default-Theme": true
             }
           ]
         }
@@ -87,16 +88,6 @@
       ]
     }
   ],
-  "QCustomCheckBox":[
-		{
-			"name":"checkBox",
-            "bgColor":"#B7B7B7",
-			"circleColor":"#008080",
-			"activeColor":"#99CCCC",
-			"animationEasingCurve":"Linear",
-			"animationDuration":500
-		}
-	],
     "QCustomSlideMenu": [
         {
             "name": "notification_slide",

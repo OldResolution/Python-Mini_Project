@@ -14,7 +14,7 @@
     },
     {
       "name": "github",
-      "icon": "Qss/icons/icons/font_awesome/brands/github.png"
+      "icon": "Qss/icons/icons/feather/facebook.png"
     },
     {
       "name": "google_2",
@@ -22,7 +22,7 @@
     },
     {
       "name": "github_2",
-      "icon": "Qss/icons/icons/font_awesome/brands/github.png"
+      "icon": "Qss/icons/icons/feather/facebook.png"
     }
   ]
 }

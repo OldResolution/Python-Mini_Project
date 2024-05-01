@@ -1,0 +1,32 @@
+{
+  "QPushButton": [
+    {
+      "name": "MenuButton",
+      "icon": "Qss/icons/icons/feather/align-justify.png"
+    },
+    {
+      "name": "Homebutton",
+      "icon": "Qss/icons/icons/feather/home.png"
+    },
+    {
+      "name": "past_searches",
+      "icon": "Qss/icons/icons/feather/chevrons-left.png"
+    },
+    {
+      "name": "InfoButton",
+      "icon": "Qss/icons/icons/feather/info.png"
+    },
+    {
+      "name": "LogoutButton",
+      "icon": "Qss/icons/icons/material_design/logout.png"
+    },
+    {
+      "name": "Close_menu",
+      "icon": "Qss/icons/icons/feather/x-circle.png"
+    },
+    {
+      "name": "searchButton",
+      "icon": "Qss/icons/icons/feather/search.png"
+    }
+  ]
+}
