@@ -1,7 +1,7 @@
 {
   "QMainWindow": [
     {
-      "tittle": "Login and signup",
+      "tittle": "AppName",
       "icon": ":/font_awesome_brands/icons/font_awesome/brands/windows.png",
       "transluscentBg": true
     }
@@ -27,5 +27,100 @@
         "OrginizationDormain": "Modern UI.org"
       }
     }
-   ]
+   ],
+	"QCustomSlideMenu": [
+		{
+			"name": "LeftMenuContainer",
+			"defaultSize": [
+				{
+					"width": 32,
+					"height": "parent"
+				}
+			],
+			"collapsedSize": [
+				{
+					"width": 32,
+					"height": "parent"
+				}
+			],
+			"expandedSize": [
+				{
+					"width": 125,
+					"height": "parent"
+				}
+			],
+			"toggleButton": [
+				{
+					"buttonName": "MenuButton",
+					"icons": [
+						{
+							"whenMenuIsCollapsed": ":/feather/icons/feather/align-justify.png",
+							"whenMenuIsExpanded": ":/feather/icons/feather/chevron-left.png"
+						}
+					]
+				}
+			],
+			"menuTransitionAnimation": [
+				{
+					"animationDuration": 500,
+					"animationEasingCurve": "Linear"
+				}
+			]
+		},
+		{
+			"name": "CenterMenuContainer",
+			"defaultSize": [
+				{
+					"width": 0,
+					"height": "parent"
+				}
+			],
+			"collapsedSize": [
+				{
+					"width": 0,
+					"height": "parent"
+				}
+			],
+			"expandedSize": [
+				{
+					"width": 125,
+					"height": "parent"
+				}
+			],
+			"menuTransitionAnimation": [
+				{
+					"animationDuration": 500,
+					"animationEasingCurve": "Linear"
+				}
+			]
+		}
+	],
+	"QCustomQStackedWidget":[
+		{
+			"name":"Side_Bar",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"past_searches": "page_2",
+							"InfoButton": "page_3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name":"Pages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"Homebutton": "HomeMain",
+							"InfoButton": "InformationMain"
+						}
+					]
+				}
+			]
+		}
+	]
 }
