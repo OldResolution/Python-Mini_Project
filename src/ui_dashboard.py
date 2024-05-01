@@ -25,7 +25,7 @@ class Ui_dashboard(object):
     def setupUi(self, dashboard):
         if not dashboard.objectName():
             dashboard.setObjectName(u"dashboard")
-        dashboard.resize(849, 598)
+        dashboard.resize(850, 598)
         dashboard.setStyleSheet(u"")
         self.dash_centralwidget = QWidget(dashboard)
         self.dash_centralwidget.setObjectName(u"dash_centralwidget")

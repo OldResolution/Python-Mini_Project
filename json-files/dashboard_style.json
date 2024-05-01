@@ -62,7 +62,7 @@
 			],
 			"menuTransitionAnimation": [
 				{
-					"animationDuration": 500,
+					"animationDuration": 100,
 					"animationEasingCurve": "Linear"
 				}
 			]
@@ -89,7 +89,7 @@
 			],
 			"menuTransitionAnimation": [
 				{
-					"animationDuration": 500,
+					"animationDuration": 100,
 					"animationEasingCurve": "Linear"
 				}
 			]

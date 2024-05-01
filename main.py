@@ -113,5 +113,5 @@ class DashboardWindow(QMainWindow):
 # EXECUTE APP
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = DashboardWindow()
+    window = MainWindow()
     sys.exit(app.exec_())

@@ -6,7 +6,6 @@ Username='postgres'
 Password='Tejas'
 Hostname='localhost'
 Port= '5432'
-
 conn=None
 cur=None
 def Compare_info(gamename):
