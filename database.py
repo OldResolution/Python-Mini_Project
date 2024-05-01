@@ -3,6 +3,7 @@ import psycopg2
 Dbname ='PyProject'
 Username='postgres'
 Hostname='localhost'
+Password='savin'
 Port= '5432'
 conn=None
 cur=None
