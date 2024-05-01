@@ -1,7 +1,7 @@
 import psutil
 import platform
 from datetime import datetime
-
+import wmi
 
 value = [["Memory"],
         ['Graphics Card'],
@@ -22,13 +22,27 @@ def get_size(bytes, suffix="B"):
         bytes /= factor
 
 
+<<<<<<< Updated upstream
 swap = psutil.swap_memory()
 svmem = psutil.virtual_memory()
+=======
+uname = platform.uname()
+
+
+# get the memory details
+svmem = psutil.virtual_memory()
+
+# get the swap memory details (if exists)
+swap = psutil.swap_memory()
+
+
+>>>>>>> Stashed changes
 partitions = psutil.disk_partitions()
 for partition in partitions:
     print(f"=== Device: {partition.device} ===")
     print(f"  Mountpoint: {partition.mountpoint}")
     print(f"  File system type: {partition.fstype}")
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     try:
         partition_usage = psutil.disk_usage(partition.mountpoint)
@@ -52,6 +66,12 @@ gpu_info = computer.Win32_VideoController()[0]
 
 
 
+=======
+partition_usage = psutil.disk_usage(partition.mountpoint)
+
+computer = wmi.WMI()
+gpu_info = computer.Win32_VideoController()[0]
+>>>>>>> Stashed changes
 def Get_User_Info():
     OS=platform.system()
     Proccesor=platform.processor()
@@ -59,6 +79,10 @@ def Get_User_Info():
     Rom=get_size(partition_usage.free)
     GPU=format(gpu_info.Name)
 
+<<<<<<< Updated upstream
     return OS,Proccesor,Ram,Rom,GPU
 
+>>>>>>> Stashed changes
+=======
+    return OS,Proccesor,Ram,Rom,GPU
 >>>>>>> Stashed changes

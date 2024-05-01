@@ -1004,6 +1004,7 @@
 2024-04-15 15:55:52,549 - INFO - Checking icons for qt designer app.
 2024-04-15 15:55:54,287 - INFO - all icons have been checked and missing icons generated!
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 2024-04-16 12:03:43,254 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
 2024-04-16 12:03:44,654 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
@@ -1097,4 +1098,18 @@
 2024-04-28 00:27:29,726 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
 2024-04-28 00:27:29,985 - INFO - Checking icons for qt designer app.
 2024-04-28 00:27:30,367 - INFO - all icons have been checked and missing icons generated!
+>>>>>>> Stashed changes
+=======
+2024-05-01 10:58:03,019 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-05-01 10:58:03,371 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-05-01 10:58:03,649 - INFO - Checking icons for qt designer app.
+2024-05-01 10:58:03,992 - INFO - all icons have been checked and missing icons generated!
+2024-05-01 10:59:02,190 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-05-01 10:59:02,484 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-05-01 10:59:02,905 - INFO - Checking icons for qt designer app.
+2024-05-01 10:59:03,292 - INFO - all icons have been checked and missing icons generated!
+2024-05-01 10:59:47,606 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-05-01 10:59:47,911 - INFO - Checking icons for Modern Teal Slate theme. Icons color: #333333
+2024-05-01 10:59:48,201 - INFO - Checking icons for qt designer app.
+2024-05-01 10:59:48,516 - INFO - all icons have been checked and missing icons generated!
 >>>>>>> Stashed changes

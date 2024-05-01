@@ -82,6 +82,10 @@ def login(name, passw):
         if conn:
             conn.close()
 
+<<<<<<< Updated upstream
 def Gameinfo(gamename):
     pass
     
+=======
+
+>>>>>>> Stashed changes

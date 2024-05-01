@@ -98,4 +98,4 @@ def game_info(gamename):
         if conn:
             conn.close()
 
-print (game_info("Far Cry 1"))
+print (game_info("GTA 5"))
