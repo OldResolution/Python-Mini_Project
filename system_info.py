@@ -1,8 +1,7 @@
 import psutil
 import platform
-import sys
 from datetime import datetime
-import wmi
+
 
 value = [["Memory"],
         ['Graphics Card'],
@@ -93,9 +92,3 @@ for partition in partitions:
 disk_io = psutil.disk_io_counters()
 print(f"Total read: {get_size(disk_io.read_bytes)}")
 print(f"Total write: {get_size(disk_io.write_bytes)}")
-
-#graphics card for windows
-computer = wmi.WMI()
-gpu_info = computer.Win32_VideoController()[0]
-print("="*40, "Graphic Card Information", "="*40)
-print('Graphics Card: {0}'.format(gpu_info.Name))
