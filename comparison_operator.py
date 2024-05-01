@@ -15,8 +15,8 @@ def Compare_info(gamename):
 
     # Assuming you have a database query function to retrieve hardware information of users who play the game
     user_hardware_info = game_info(gamename)
-    #print (user_hardware_info['RAM'])
-    #print (user_ram)
+    print (user_hardware_info['RAM'])
+    print (user_ram)
 
     # Compare user's hardware information with system information
     if user_hardware_info:
@@ -27,17 +27,17 @@ def Compare_info(gamename):
             matched_criteria.append('Processor')
         else:
             return "Processor in incompatible." 
-        if user_ram <= user_hardware_info['RAM']:
+        if user_ram >= user_hardware_info['RAM']:
             matched_criteria.append('RAM')
-           # return "RAM in compatible."
+            return "RAM in compatible."
         else:
             return "RAM in incompatible."
         #if user_rom >= user_hardware_info['ROM']: 
            # matched_criteria.append('ROM')
-        if user_gpu == user_hardware_info['GPU']:
+        '''if user_gpu == user_hardware_info['GPU']:
             matched_criteria.append('GPU')    
         else:
-            return "GPU is incompatible."
+            return "GPU is incompatible."'''
 
         if len(matched_criteria) == 0:
             return "No user matches the hardware criteria for this game."
@@ -98,4 +98,4 @@ def game_info(gamename):
         if conn:
             conn.close()
 
-print (game_info("GTA 5"))
+print (Compare_info("GTA 5"))
