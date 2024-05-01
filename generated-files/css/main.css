@@ -1713,3 +1713,102 @@ QLineEdit {
 
 #notification_slide * {
   background-color: transparent; }
+
+#dashboard * {
+  border: none;
+  background-color: transparent;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: #333333; }
+
+#dash_centralwidget {
+  background-color: #E8E8E8; }
+
+#CenterMenuContainer {
+  background-color: #339999;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: #F5F5F5; }
+
+#More_menu, #PastSearches, #Information {
+  color: #F5F5F5; }
+
+#Close_menu {
+  border-radius: 10px;
+  color: #F5F5F5; }
+  #Close_menu:hover {
+    background-color: #99CCCC;
+    color: #F5F5F5; }
+  #Close_menu:selected {
+    background-color: #339999;
+    color: #DCDCDC; }
+
+#Side_Bar {
+  padding: 10px 10px;
+  background-color: #008080;
+  border-radius: 8px; }
+
+#LeftMenuSubContainer {
+  background-color: #339999; }
+
+#LeftMenuSubContainer {
+  background-color: #339999; }
+
+#LeftMenuSubContainer QPushButton {
+  padding: 5px 10px;
+  border: 1px solid #008080;
+  background-color: #339999;
+  text-align: left;
+  border-top-left-radius: 10px;
+  color: #F5F5F5; }
+  #LeftMenuSubContainer QPushButton:hover {
+    background-color: #99CCCC;
+    color: #F5F5F5; }
+  #LeftMenuSubContainer QPushButton:selected {
+    background-color: #339999;
+    color: #DCDCDC; }
+
+#MainBodyContainer {
+  background-color: #D0D0D0; }
+
+#searchBar {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 2px solid #C4C4C4; }
+  #searchBar:hover {
+    border: 1px solid #339999;
+    color: #333333; }
+  #searchBar:focus {
+    border: 1px solid #66B2B2; }
+  #searchBar:selected {
+    background-color: #339999;
+    color: #D0D0D0; }
+
+#searchButton {
+  padding: 5px 10px;
+  border: 1px solid #008080;
+  background-color: #339999;
+  text-align: left;
+  border-top-left-radius: 10px;
+  color: black; }
+  #searchButton:hover {
+    background-color: #99CCCC;
+    color: #F5F5F5; }
+  #searchButton:selected {
+    background-color: #339999;
+    color: #DCDCDC; }
+
+#widget_3 QLabel {
+  font-family: "Times New Roman";
+  font-size: 20px; }
+
+#InformationMain QLabel {
+  font-family: "Times New Roman";
+  font-size: 20px; }
+
+#mainBodyContent, #widget_3, #divide1, #divide2, #divide3, #divide4 {
+  border: 2px solid; }
+
+#GPU_tick, #Os_tick, #Ram_tick, #cpu_tick, #disk_tick {
+  border-bottom: 2px solid; }

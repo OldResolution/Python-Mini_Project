@@ -2,6 +2,8 @@
 // FILE AUTO-GENERATED. PUT YOUR DEFAULT STYLES HERE.
 // THESE STYLES WILL OVERIDE THE THEME STYLES
 //====================================================//
+
+//login and signup page//
 #centralwidget{
   border-radius: 20px;
   //background-color: $COLOR_ACCENT_1;
@@ -91,6 +93,122 @@ QLineEdit{
   background-color: transparent;
   //color: $COLOR_BACKGROUND_1;
 }
+//dashboard//
+#dashboard *{
+  border:none;
+  background-color: transparent;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: $COLOR_TEXT_1;
+}
+#dash_centralwidget{
+  background-color: $COLOR_BACKGROUND_2;
+}
+#CenterMenuContainer{
+  background-color: $COLOR_ACCENT_2;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: $COLOR_BACKGROUND_1;
+}
+#More_menu ,#PastSearches,#Information {
+  color: $COLOR_BACKGROUND_1;
+}
+#Close_menu{
+      border-radius: 10px;
+      color: $COLOR_BACKGROUND_1;
+          &:hover {
+               background-color: $COLOR_ACCENT_4;
+               color: $COLOR_BACKGROUND_1;
+            }
+
+            &:selected {
+               background-color: $COLOR_ACCENT_2;
+               color: $COLOR_BACKGROUND_3;
+            }
+        }
+#Side_Bar{
+  padding: 10px 10px;
+  background-color: $COLOR_ACCENT_1;
+  border-radius: 8px;
+}
+#LeftMenuSubContainer{
+  background-color: $COLOR_ACCENT_2;
+}
+#LeftMenuSubContainer {
+  background-color: $COLOR_ACCENT_2;
+}
+#LeftMenuSubContainer QPushButton{
+      padding: 5px 10px;
+      border: $BORDER_SELECTION_1;
+      background-color: $COLOR_ACCENT_2;
+      text-align: left;
+      border-top-left-radius: 10px;
+      color: $COLOR_BACKGROUND_1;
+          &:hover {
+               background-color: $COLOR_ACCENT_4;
+               color: $COLOR_BACKGROUND_1;
+            }
+
+            &:selected {
+               background-color: $COLOR_ACCENT_2;
+               color: $COLOR_BACKGROUND_3;
+            }
+        }
+#MainBodyContainer{
+   background-color: $COLOR_BACKGROUND_4;
+}
+//main working table and other crap//
+#searchBar{
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 2px solid $COLOR_BACKGROUND_5;
+  &:hover {
+        border: $BORDER_SELECTION_2;
+        color: $COLOR_TEXT_1;
+    }
+
+    &:focus {
+        border: $BORDER_SELECTION_3;
+    }
+
+    &:selected {
+        background-color: $COLOR_ACCENT_2;
+        color: $COLOR_BACKGROUND_4;
+    }
+}
+#searchButton{
+  padding: 5px 10px;
+  border: $BORDER_SELECTION_1;
+  background-color: $COLOR_ACCENT_2;
+  text-align: left;
+  border-top-left-radius: 10px;
+  color: black;
+      &:hover {
+           background-color: $COLOR_ACCENT_4;
+           color: $COLOR_BACKGROUND_1;
+        }
+
+        &:selected {
+           background-color: $COLOR_ACCENT_2;
+           color: $COLOR_BACKGROUND_3;
+        }
+}
+#widget_3 QLabel{
+  font-family: "Times New Roman";
+  font-size: max(20px, 18px);
+}
+#InformationMain QLabel{
+  font-family: "Times New Roman";
+  font-size: max(20px, 18px);
+}
+#mainBodyContent,#widget_3,#divide1,#divide2,#divide3,#divide4{
+ border: 2px solid
+}
+#GPU_tick,#Os_tick,#Ram_tick,#cpu_tick,#disk_tick {
+  border-bottom: 2px solid;
+}
+
 //===================================================//
 // END //
 //====================================================//

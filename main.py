@@ -91,8 +91,27 @@ class DashboardWindow(QMainWindow):
         QAppSettings.updateAppSettings(self)
         self.show()
 
+        #expand central menu widget  size
+        self.ui.past_searches.clicked.connect(lambda: self.ui.CenterMenuContainer.expandMenu())
+        self.ui.InfoButton.clicked.connect(lambda: self.ui.CenterMenuContainer.expandMenu())
+
+        #close central menu widget
+        self.ui.Close_menu.clicked.connect(lambda: self.ui.CenterMenuContainer.collapseMenu())
+
+        #logout
+        self.ui.LogoutButton.clicked.connect(self.logout)
+
+    def logout(self):
+        self.hide()  # Hide the login window
+        self.logout = MainWindow()  # Create an instance of the dashboard window
+        self.logout.show()  # Show the dashboard window
+
+   # def Comparison_menu(self):
+
+   # def System_info(self):
+
 # EXECUTE APP
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = DashboardWindow()
     sys.exit(app.exec_())
