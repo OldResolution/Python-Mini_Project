@@ -9,16 +9,8 @@
       "icon": "Qss/icons/icons/feather/home.png"
     },
     {
-      "name": "Reportsbutton",
-      "icon": "Qss/icons/icons/feather/file-text.png"
-    },
-    {
-      "name": "MailsButton",
-      "icon": "Qss/icons/icons/feather/inbox.png"
-    },
-    {
-      "name": "SettingsButton",
-      "icon": "Qss/icons/icons/feather/settings.png"
+      "name": "past_searches",
+      "icon": "Qss/icons/icons/feather/chevrons-left.png"
     },
     {
       "name": "InfoButton",
@@ -29,23 +21,11 @@
       "icon": "Qss/icons/icons/material_design/logout.png"
     },
     {
-      "name": "pushButton_2",
+      "name": "Close_menu",
       "icon": "Qss/icons/icons/feather/x-circle.png"
     },
     {
-      "name": "pushButton_5",
-      "icon": "Qss/icons/icons/feather/window_minimize.png"
-    },
-    {
-      "name": "pushButton_4",
-      "icon": "Qss/icons/icons/feather/square.png"
-    },
-    {
-      "name": "pushButton_3",
-      "icon": "Qss/icons/icons/feather/x.png"
-    },
-    {
-      "name": "pushButton",
+      "name": "searchButton",
       "icon": "Qss/icons/icons/feather/search.png"
     }
   ]
