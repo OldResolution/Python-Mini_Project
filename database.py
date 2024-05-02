@@ -1,9 +1,9 @@
 import psycopg2
 
-Dbname ='PyProject'
+Dbname ='gamereq'
 Username='postgres'
 Hostname='localhost'
-Password='savin'
+Password='oracle'
 Port= '5432'
 conn=None
 cur=None

@@ -3,9 +3,9 @@ import psycopg2
 from system_info import Get_User_Info  # Importing Get_User_Info function from system_info module
 
 # Database connection information
-Dbname = 'PyProject'
+Dbname = 'gamereq'
 Username = 'postgres'
-Password = 'savin'
+Password = 'oracle'
 Hostname = 'localhost'
 Port = '5432'
 
@@ -153,4 +153,3 @@ def close_database_connection():
     if conn:
         conn.close()
 
-Compare_minimum_info("SolidWorks")
