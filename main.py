@@ -1,6 +1,7 @@
 # IMPORTS
 import sys
 import os
+
 from PySide6 import *
 from PySide6.QtCore import *
 # IMPORT GUI FILE
@@ -82,6 +83,8 @@ class MainWindow(QMainWindow):
             success, message = signup_user(username, password, email)
             self.showNotif(message)
 
+from PySide6.QtWidgets import QLabel
+
 class DashboardWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -104,6 +107,10 @@ class DashboardWindow(QMainWindow):
         #dashboard buttons
         self.ui.searchButton.clicked.connect(self.Comparison_menu)
         self.ui.InfoButton.clicked.connect(self.System_info)
+        self.ui.searchButton.clicked.connect(self.handle_search)
+        self.history_label = self.ui.pastSearches
+        self.search_history = []
+
     def logout(self):
         self.hide()  # Hide the login window
         self.logout = MainWindow()  # Create an instance of the dashboard window
@@ -153,8 +160,20 @@ class DashboardWindow(QMainWindow):
         self.ui.Disk_Usage_Info.setText(f"ROM:"+rom)
         self.ui.GPU_info.setText(f"GPU:"+gpu)
 
+    def handle_search(self):
+        game_name = self.ui.searchBar.text()
+        if game_name:  # Ensure non-empty string
+            self.search_history.append(game_name)  # Add game name to history
+            print("Search history:", self.search_history)  # Print search history for debugging
+            self.update_history_label()
+
+    def update_history_label(self):
+        history_text = "\n".join(self.search_history)  # Concatenate search history with newline separator
+        self.history_label.setText(history_text)  # Set the text of the label to the concatenated search history
+
+
 # EXECUTE APP
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = DashboardWindow()
     sys.exit(app.exec_())
