@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QLineEdit, QMainWindow, QProgressBar, QPushButton,
-    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
+    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
+    QSpacerItem, QVBoxLayout, QWidget)
 
 from Custom_Widgets.QCustomQStackedWidget import QCustomQStackedWidget
 from Custom_Widgets.QCustomSlideMenu import QCustomSlideMenu
@@ -322,14 +322,6 @@ class Ui_dashboard(object):
         self.GameName.setFont(font2)
 
         self.verticalLayout_12.addWidget(self.GameName)
-
-        self.Searchprogress = QProgressBar(self.progressGame)
-        self.Searchprogress.setObjectName(u"Searchprogress")
-        sizePolicy4.setHeightForWidth(self.Searchprogress.sizePolicy().hasHeightForWidth())
-        self.Searchprogress.setSizePolicy(sizePolicy4)
-        self.Searchprogress.setValue(24)
-
-        self.verticalLayout_12.addWidget(self.Searchprogress)
 
 
         self.verticalLayout_7.addWidget(self.progressGame)
