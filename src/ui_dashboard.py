@@ -560,10 +560,10 @@ class Ui_dashboard(object):
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.label_3 = QLabel(self.State)
-        self.label_3.setObjectName(u"label_3")
+        self.Compatiblity_status = QLabel(self.State)
+        self.Compatiblity_status.setObjectName(u"Compatiblity_status")
 
-        self.horizontalLayout_3.addWidget(self.label_3, 0, Qt.AlignRight)
+        self.horizontalLayout_3.addWidget(self.Compatiblity_status, 0, Qt.AlignRight)
 
 
         self.verticalLayout_7.addWidget(self.State)
@@ -629,7 +629,7 @@ class Ui_dashboard(object):
 
         self.retranslateUi(dashboard)
 
-        self.Side_Bar.setCurrentIndex(0)
+        self.Side_Bar.setCurrentIndex(1)
         self.Pages.setCurrentIndex(0)
 
 
@@ -660,8 +660,8 @@ class Ui_dashboard(object):
         self.LogoutButton.setText(QCoreApplication.translate("dashboard", u"Logout", None))
         self.More_menu.setText(QCoreApplication.translate("dashboard", u"More Menu", None))
         self.Close_menu.setText("")
-        self.pastSearches.setText(QCoreApplication.translate("dashboard", u"TextLabel", None))
-        self.Information.setText(QCoreApplication.translate("dashboard", u"Information", None))
+        self.pastSearches.setText("")
+        self.Information.setText("")
         self.searchButton.setText(QCoreApplication.translate("dashboard", u"Search", None))
         self.GameName.setText("")
         self.OS.setText(QCoreApplication.translate("dashboard", u"Operating System", None))
@@ -674,7 +674,7 @@ class Ui_dashboard(object):
         self.Cpu_button.setText("")
         self.Gpu_button.setText("")
         self.Disk_button.setText("")
-        self.label_3.setText(QCoreApplication.translate("dashboard", u"Compatiblity Status", None))
+        self.Compatiblity_status.setText("")
 #if QT_CONFIG(whatsthis)
         self.Title_System.setWhatsThis(QCoreApplication.translate("dashboard", u"<html><head/><body><p align=\"center\">System Details</p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)

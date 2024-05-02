@@ -1,7 +1,7 @@
 {
   "QMainWindow": [
     {
-      "tittle": "AppName",
+      "tittle": "SpecCheck",
       "icon": ":/font_awesome_brands/icons/font_awesome/brands/windows.png",
       "transluscentBg": true
     }

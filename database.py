@@ -1,9 +1,9 @@
 import psycopg2
 
-Dbname ='gamereq'
+Dbname ='PyProject'
 Username='postgres'
 Hostname='localhost'
-Password='oracle'
+Password='savin'
 Port= '5432'
 conn=None
 cur=None
@@ -81,3 +81,27 @@ def login(name, passw):
             cur.close()
         if conn:
             conn.close()
+
+def forgot_password(username,password):
+    conn = connect_to_database()
+    if conn is None:
+        return False, "Error connecting to the database"
+
+    try:
+        cur = conn.cursor()
+
+        cur.execute("SELECT * FROM info WHERE user_name = %s", (username,))
+        user_data = cur.fetchone()
+        if user_data is None:
+            # Username not found in the database
+            return False, "Username not found"
+
+        cur.execute("UPDATE info SET user_password = %s WHERE user_name = %s", (password, username))
+        conn.commit()
+
+        cur.close()
+        conn.close()
+
+        return True, "Password reset successful"
+    except psycopg2.Error as e:
+        return False, f"Error reseting password: {e}"

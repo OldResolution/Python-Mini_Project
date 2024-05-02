@@ -394,14 +394,14 @@ padding:4 px 5 px;
              <number>0</number>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="page_2">
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <item>
                <widget class="QLabel" name="pastSearches">
                 <property name="text">
-                 <string>TextLabel</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -423,7 +423,7 @@ padding:4 px 5 px;
                  </font>
                 </property>
                 <property name="text">
-                 <string>Information</string>
+                 <string/>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -1049,9 +1049,9 @@ padding:4 px 5 px;
                   <number>0</number>
                  </property>
                  <item alignment="Qt::AlignRight">
-                  <widget class="QLabel" name="label_3">
+                  <widget class="QLabel" name="Compatiblity_status">
                    <property name="text">
-                    <string>Compatiblity Status</string>
+                    <string/>
                    </property>
                   </widget>
                  </item>

@@ -208,7 +208,26 @@ QLineEdit{
 #GPU_tick,#Os_tick,#Ram_tick,#cpu_tick,#disk_tick {
   border-bottom: 2px solid;
 }
+//forgot password
+#Confirm{
+      padding: 8px 10px;
+      border-radius: 8px;
+      background-color: $COLOR_ACCENT_3;
+      color: $COLOR_BACKGROUND_1;
+          &:hover {
+               background-color: $COLOR_ACCENT_1;
+               color: $COLOR_BACKGROUND_1;
+            }
 
+            &:focus {
+               background-color: $COLOR_ACCENT_3;
+               color: $COLOR_BACKGROUND_3;    }
+
+            &:selected {
+               background-color: $COLOR_ACCENT_3;
+               color: $COLOR_BACKGROUND_3;
+            }
+        }
 //===================================================//
 // END //
 //====================================================//

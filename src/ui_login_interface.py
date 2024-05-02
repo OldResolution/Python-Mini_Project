@@ -256,12 +256,13 @@ class Ui_login(object):
 
         self.verticalLayout_5.addWidget(self.lineEdit_2)
 
-        self.label_5 = QLabel(self.frame_3)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setAlignment(Qt.AlignCenter)
-        self.label_5.setOpenExternalLinks(True)
+        self.Forgot = QPushButton(self.frame_3)
+        self.Forgot.setObjectName(u"Forgot")
+        self.Forgot.setStyleSheet(u"font: 9pt \"Segoe UI\";\n"
+"text-decoration: underline;\n"
+"color:blue;")
 
-        self.verticalLayout_5.addWidget(self.label_5)
+        self.verticalLayout_5.addWidget(self.Forgot)
 
         self.login_button = QPushButton(self.frame_3)
         self.login_button.setObjectName(u"login_button")
@@ -273,39 +274,12 @@ class Ui_login(object):
 
         self.verticalLayout_6.addWidget(self.frame_3, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.label_6 = QLabel(self.frame_2)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setFont(font)
-        self.label_6.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_6.addWidget(self.label_6)
-
         self.frame_4 = QFrame(self.frame_2)
         self.frame_4.setObjectName(u"frame_4")
         self.frame_4.setFrameShape(QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frame_4)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.google = QPushButton(self.frame_4)
-        self.google.setObjectName(u"google")
-        self.google.setCursor(QCursor(Qt.PointingHandCursor))
-        icon2 = QIcon()
-        icon2.addFile(u":/font_awesome_brands/icons/font_awesome/brands/google-plus-g.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.google.setIcon(icon2)
-        self.google.setIconSize(QSize(24, 24))
-
-        self.horizontalLayout_3.addWidget(self.google)
-
-        self.github = QPushButton(self.frame_4)
-        self.github.setObjectName(u"github")
-        self.github.setCursor(QCursor(Qt.PointingHandCursor))
-        icon3 = QIcon()
-        icon3.addFile(u":/feather/icons/feather/facebook.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.github.setIcon(icon3)
-        self.github.setIconSize(QSize(24, 24))
-
-        self.horizontalLayout_3.addWidget(self.github)
-
 
         self.verticalLayout_6.addWidget(self.frame_4)
 
@@ -372,35 +346,12 @@ class Ui_login(object):
 
         self.verticalLayout_9.addWidget(self.frame_7, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.label_12 = QLabel(self.frame_6)
-        self.label_12.setObjectName(u"label_12")
-        self.label_12.setFont(font)
-        self.label_12.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_9.addWidget(self.label_12)
-
         self.frame_8 = QFrame(self.frame_6)
         self.frame_8.setObjectName(u"frame_8")
         self.frame_8.setFrameShape(QFrame.StyledPanel)
         self.frame_8.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_8)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.google_2 = QPushButton(self.frame_8)
-        self.google_2.setObjectName(u"google_2")
-        self.google_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.google_2.setIcon(icon2)
-        self.google_2.setIconSize(QSize(24, 24))
-
-        self.horizontalLayout_4.addWidget(self.google_2)
-
-        self.github_2 = QPushButton(self.frame_8)
-        self.github_2.setObjectName(u"github_2")
-        self.github_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.github_2.setIcon(icon3)
-        self.github_2.setIconSize(QSize(24, 24))
-
-        self.horizontalLayout_4.addWidget(self.github_2)
-
 
         self.verticalLayout_9.addWidget(self.frame_8)
 
@@ -455,19 +406,19 @@ class Ui_login(object):
         self.label_4.setText(QCoreApplication.translate("login", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Sign In</span></p></body></html>", None))
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("login", u"Username", None))
         self.lineEdit_2.setPlaceholderText(QCoreApplication.translate("login", u"Password", None))
-        self.label_5.setText(QCoreApplication.translate("login", u"<html><head/><body><p><a href=\"google.com\"><span style=\" text-decoration: underline; color:#0000ff;\">Forgot your password?</span></a></p></body></html>", None))
+#if QT_CONFIG(tooltip)
+        self.Forgot.setToolTip(QCoreApplication.translate("login", u"<html><head/><body><p align=\"center\"><span style=\" color:#0000ff;\">Forgot Password?</span></p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.Forgot.setWhatsThis(QCoreApplication.translate("login", u"<html><head/><body><p align=\"center\"><span style=\" color:#00007f;\">Forgot</span><span style=\" font-weight:700; color:#00007f;\"/><span style=\" color:#00007f;\">Password?</span></p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.Forgot.setText(QCoreApplication.translate("login", u"Forgot Password?", None))
         self.login_button.setText(QCoreApplication.translate("login", u"Login", None))
-        self.label_6.setText(QCoreApplication.translate("login", u"Or Register with socials", None))
-        self.google.setText("")
-        self.github.setText("")
         self.label_10.setText(QCoreApplication.translate("login", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Sign Up</span></p></body></html>", None))
         self.r_username.setPlaceholderText(QCoreApplication.translate("login", u"Username", None))
         self.r_password.setPlaceholderText(QCoreApplication.translate("login", u"Password", None))
         self.r_conpasswprd.setPlaceholderText(QCoreApplication.translate("login", u"Confirm Password", None))
         self.r_emailid.setPlaceholderText(QCoreApplication.translate("login", u"Email ID", None))
         self.register_button.setText(QCoreApplication.translate("login", u"Register", None))
-        self.label_12.setText(QCoreApplication.translate("login", u"Or Register with socials", None))
-        self.google_2.setText("")
-        self.github_2.setText("")
     # retranslateUi
 

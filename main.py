@@ -7,7 +7,8 @@ from PySide6.QtCore import *
 # IMPORT GUI FILE
 from src.ui_login_interface import *
 from src.ui_dashboard import *
-from database import login, signup_user  # Import login and signup_user functions from database module
+from src.ui_forgot_password import *
+from database import * # Import login and signup_user functions from database module
 from comparison_operator import Compare_minimum_info
 from system_info import Get_User_Info
 # IMPORT Custom widgets
@@ -33,6 +34,11 @@ class MainWindow(QMainWindow):
         # Connect login and signup functions to buttons
         self.ui.login_button.clicked.connect(self.login)
         self.ui.register_button.clicked.connect(self.signup)
+        self.ui.Forgot.clicked.connect(self.Forgot)
+
+    def Forgot(self):
+        self.forgot = ForgotPasswordWindow()
+        self.forgot.show()
 
     # Function to display notification
     def showNotif(self, msg):
@@ -83,7 +89,44 @@ class MainWindow(QMainWindow):
             success, message = signup_user(username, password, email)
             self.showNotif(message)
 
-from PySide6.QtWidgets import QLabel
+class ForgotPasswordWindow(QWidget):
+    def __init__(self):
+        QWidget.__init__(self)
+        self.ui = Ui_Form()
+        self.ui.setupUi(self)
+
+        self.ui.Confirm.clicked.connect(self.ResetPassword)
+
+    def showResponse(self, msg):
+        self.ui.notification_fg.setText(msg)
+
+    def ResetPassword(self):
+        # Retrieve username and new password from the input fields
+        username = self.ui.Username.text()
+        new_password = self.ui.NewPassword.text()
+        reentered_password = self.ui.RENewPassword.text()
+
+        # Perform basic validation
+        if not username or not new_password or not reentered_password:
+            # Show an error message if any field is empty
+            self.showResponse("Please fill in all fields.")
+            return
+
+        if new_password != reentered_password:
+            # Show an error message if passwords don't match
+            self.showResponse("Passwords do not match.")
+            return
+
+        # Call the forgot_password function
+        success, message = forgot_password(username, new_password)
+
+        if success:
+            # Show a success message if the password was updated successfully
+            self.showResponse(message)
+        else:
+            # Show an error message if there was an issue updating the password
+            self.showResponse(message)
+
 
 class DashboardWindow(QMainWindow):
     def __init__(self):
@@ -111,6 +154,9 @@ class DashboardWindow(QMainWindow):
         self.history_label = self.ui.pastSearches
         self.search_history = []
 
+        # Call Comparison_menu to update Compatiblity_status
+        self.Comparison_menu()
+
     def logout(self):
         self.hide()  # Hide the login window
         self.logout = MainWindow()  # Create an instance of the dashboard window
@@ -119,10 +165,22 @@ class DashboardWindow(QMainWindow):
     def Comparison_menu(self):
         gamename = self.ui.searchBar.text()
 
+        # Check if the game name is empty
+        if not gamename:
+            self.ui.GameName.setText("Please enter a game name")
+            return
+
         # Set the game name label
         self.ui.GameName.setText(gamename)
 
-        compatibility = Compare_minimum_info(gamename)
+        # Call Compare_minimum_info function
+        compatibility, compatibility_message = Compare_minimum_info(gamename)
+
+        # Check if the compatibility is None (indicating game not found)
+        if compatibility is None:
+            # Display an error message in the game name label
+            self.ui.GameName.setText("Game not found in database")
+            return
 
         # Map compatibility status to icon paths
         icon_status_map = {
@@ -138,6 +196,14 @@ class DashboardWindow(QMainWindow):
             "GPU": self.ui.Gpu_button,
             "ROM": self.ui.Disk_button,
         }
+
+        # Update compatibility status label
+        compatibility_text = "Compatibility status:\n"
+        for component, status in compatibility.items():
+            compatibility_text += f"{component}: {status}\n"
+
+        self.ui.Compatiblity_status.setText(compatibility_text)
+        self.ui.Compatiblity_status.setText(compatibility_message)
 
         for component, status in compatibility.items():
             button = button_map.get(component)
@@ -175,5 +241,5 @@ class DashboardWindow(QMainWindow):
 # EXECUTE APP
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = DashboardWindow()
+    window = MainWindow()
     sys.exit(app.exec_())
