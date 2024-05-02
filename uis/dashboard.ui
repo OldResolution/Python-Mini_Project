@@ -399,20 +399,9 @@ padding:4 px 5 px;
             <widget class="QWidget" name="page_2">
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <item>
-               <widget class="QLabel" name="PastSearches">
-                <property name="font">
-                 <font>
-                  <pointsize>13</pointsize>
-                 </font>
-                </property>
+               <widget class="QLabel" name="pastSearches">
                 <property name="text">
-                 <string>Past Searches</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="wordWrap">
-                 <bool>true</bool>
+                 <string>TextLabel</string>
                 </property>
                </widget>
               </item>
