@@ -7,7 +7,8 @@ from PySide6.QtCore import *
 from src.ui_login_interface import *
 from src.ui_dashboard import *
 from database import login, signup_user  # Import login and signup_user functions from database module
-
+from comparison_operator import Compare_minimum_info
+from system_info import Get_User_Info
 # IMPORT Custom widgets
 from Custom_Widgets import *
 from Custom_Widgets.QAppSettings import QAppSettings
@@ -100,15 +101,57 @@ class DashboardWindow(QMainWindow):
 
         #logout
         self.ui.LogoutButton.clicked.connect(self.logout)
-
+        #dashboard buttons
+        self.ui.searchButton.clicked.connect(self.Comparison_menu)
+        self.ui.InfoButton.clicked.connect(self.System_info)
     def logout(self):
         self.hide()  # Hide the login window
         self.logout = MainWindow()  # Create an instance of the dashboard window
         self.logout.show()  # Show the dashboard window
 
-   # def Comparison_menu(self):
+    def Comparison_menu(self):
+        gamename = self.ui.searchBar.text()
 
-   # def System_info(self):
+        # Set the game name label
+        self.ui.GameName.setText(gamename)
+
+        compatibility = Compare_minimum_info(gamename)
+
+        # Map compatibility status to icon paths
+        icon_status_map = {
+            "Compatible": "Qss/icons/333333/feather/check-square.png",
+            "Incompatible": "Qss/icons/333333/feather/x-square.png",
+        }
+
+        # Update buttons based on compatibility status
+        button_map = {
+            "OS": self.ui.Os_button,
+            "RAM": self.ui.Ram_button,
+            "CPU": self.ui.Cpu_button,
+            "GPU": self.ui.Gpu_button,
+            "ROM": self.ui.Disk_button,
+        }
+
+        for component, status in compatibility.items():
+            button = button_map.get(component)
+            if button:
+                icon_path = icon_status_map.get(status, "")
+                if icon_path:
+                    icon = QIcon(icon_path)
+                    button.setIcon(icon)
+                    button.setIconSize(QSize(20, 20))  # Adjust icon size as needed
+            else:
+                print(f"No button found for component: {component}")
+
+    def System_info(self):
+        os, processor, ram, rom, gpu = Get_User_Info()
+
+        # Set the text of labels with the obtained user information
+        self.ui.OS_Info.setText(f"Operating System:"+os)
+        self.ui.CPU_info.setText(f"CPU:"+processor)
+        self.ui.RAM_info.setText(f"RAM:"+ram)
+        self.ui.Disk_Usage_Info.setText(f"ROM:"+rom)
+        self.ui.GPU_info.setText(f"GPU:"+gpu)
 
 # EXECUTE APP
 if __name__ == "__main__":

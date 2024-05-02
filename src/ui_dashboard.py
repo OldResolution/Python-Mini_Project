@@ -320,6 +320,9 @@ class Ui_dashboard(object):
         self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
         self.GameName = QLabel(self.progressGame)
         self.GameName.setObjectName(u"GameName")
+        font2 = QFont()
+        font2.setHintingPreference(QFont.PreferDefaultHinting)
+        self.GameName.setFont(font2)
 
         self.verticalLayout_12.addWidget(self.GameName)
 
@@ -472,14 +475,14 @@ class Ui_dashboard(object):
         self.Os_tick.setStyleSheet(u"")
         self.horizontalLayout_13 = QHBoxLayout(self.Os_tick)
         self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
-        self.pushButton_6 = QPushButton(self.Os_tick)
-        self.pushButton_6.setObjectName(u"pushButton_6")
-        sizePolicy.setHeightForWidth(self.pushButton_6.sizePolicy().hasHeightForWidth())
-        self.pushButton_6.setSizePolicy(sizePolicy)
-        self.pushButton_6.setStyleSheet(u"")
-        self.pushButton_6.setCheckable(False)
+        self.Os_button = QPushButton(self.Os_tick)
+        self.Os_button.setObjectName(u"Os_button")
+        sizePolicy.setHeightForWidth(self.Os_button.sizePolicy().hasHeightForWidth())
+        self.Os_button.setSizePolicy(sizePolicy)
+        self.Os_button.setStyleSheet(u"")
+        self.Os_button.setCheckable(False)
 
-        self.horizontalLayout_13.addWidget(self.pushButton_6)
+        self.horizontalLayout_13.addWidget(self.Os_button, 0, Qt.AlignRight)
 
 
         self.verticalLayout_13.addWidget(self.Os_tick)
@@ -488,12 +491,12 @@ class Ui_dashboard(object):
         self.Ram_tick.setObjectName(u"Ram_tick")
         self.horizontalLayout_14 = QHBoxLayout(self.Ram_tick)
         self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
-        self.pushButton_7 = QPushButton(self.Ram_tick)
-        self.pushButton_7.setObjectName(u"pushButton_7")
-        sizePolicy.setHeightForWidth(self.pushButton_7.sizePolicy().hasHeightForWidth())
-        self.pushButton_7.setSizePolicy(sizePolicy)
+        self.Ram_button = QPushButton(self.Ram_tick)
+        self.Ram_button.setObjectName(u"Ram_button")
+        sizePolicy.setHeightForWidth(self.Ram_button.sizePolicy().hasHeightForWidth())
+        self.Ram_button.setSizePolicy(sizePolicy)
 
-        self.horizontalLayout_14.addWidget(self.pushButton_7, 0, Qt.AlignRight)
+        self.horizontalLayout_14.addWidget(self.Ram_button, 0, Qt.AlignRight)
 
 
         self.verticalLayout_13.addWidget(self.Ram_tick)
@@ -502,45 +505,45 @@ class Ui_dashboard(object):
         self.cpu_tick.setObjectName(u"cpu_tick")
         self.horizontalLayout_15 = QHBoxLayout(self.cpu_tick)
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.pushButton_8 = QPushButton(self.cpu_tick)
-        self.pushButton_8.setObjectName(u"pushButton_8")
-        sizePolicy.setHeightForWidth(self.pushButton_8.sizePolicy().hasHeightForWidth())
-        self.pushButton_8.setSizePolicy(sizePolicy)
+        self.Cpu_button = QPushButton(self.cpu_tick)
+        self.Cpu_button.setObjectName(u"Cpu_button")
+        sizePolicy.setHeightForWidth(self.Cpu_button.sizePolicy().hasHeightForWidth())
+        self.Cpu_button.setSizePolicy(sizePolicy)
 
-        self.horizontalLayout_15.addWidget(self.pushButton_8, 0, Qt.AlignRight)
-
-
-        self.verticalLayout_13.addWidget(self.cpu_tick)
-
-        self.disk_tick = QWidget(self.widget_6)
-        self.disk_tick.setObjectName(u"disk_tick")
-        self.horizontalLayout_17 = QHBoxLayout(self.disk_tick)
-        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
-        self.horizontalLayout_17.setContentsMargins(0, -1, -1, -1)
-        self.pushButton_9 = QPushButton(self.disk_tick)
-        self.pushButton_9.setObjectName(u"pushButton_9")
-        sizePolicy.setHeightForWidth(self.pushButton_9.sizePolicy().hasHeightForWidth())
-        self.pushButton_9.setSizePolicy(sizePolicy)
-
-        self.horizontalLayout_17.addWidget(self.pushButton_9, 0, Qt.AlignRight)
+        self.horizontalLayout_15.addWidget(self.Cpu_button)
 
 
-        self.verticalLayout_13.addWidget(self.disk_tick)
+        self.verticalLayout_13.addWidget(self.cpu_tick, 0, Qt.AlignRight)
 
         self.GPU_tick = QWidget(self.widget_6)
         self.GPU_tick.setObjectName(u"GPU_tick")
-        self.horizontalLayout_16 = QHBoxLayout(self.GPU_tick)
-        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
-        self.horizontalLayout_16.setContentsMargins(0, -1, -1, -1)
-        self.pushButton_10 = QPushButton(self.GPU_tick)
-        self.pushButton_10.setObjectName(u"pushButton_10")
-        sizePolicy.setHeightForWidth(self.pushButton_10.sizePolicy().hasHeightForWidth())
-        self.pushButton_10.setSizePolicy(sizePolicy)
+        self.horizontalLayout_17 = QHBoxLayout(self.GPU_tick)
+        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
+        self.horizontalLayout_17.setContentsMargins(0, -1, -1, -1)
+        self.Gpu_button = QPushButton(self.GPU_tick)
+        self.Gpu_button.setObjectName(u"Gpu_button")
+        sizePolicy.setHeightForWidth(self.Gpu_button.sizePolicy().hasHeightForWidth())
+        self.Gpu_button.setSizePolicy(sizePolicy)
 
-        self.horizontalLayout_16.addWidget(self.pushButton_10, 0, Qt.AlignRight)
+        self.horizontalLayout_17.addWidget(self.Gpu_button, 0, Qt.AlignRight)
 
 
         self.verticalLayout_13.addWidget(self.GPU_tick)
+
+        self.disk_tick_2 = QWidget(self.widget_6)
+        self.disk_tick_2.setObjectName(u"disk_tick_2")
+        self.horizontalLayout_16 = QHBoxLayout(self.disk_tick_2)
+        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
+        self.horizontalLayout_16.setContentsMargins(0, -1, -1, -1)
+        self.Disk_button = QPushButton(self.disk_tick_2)
+        self.Disk_button.setObjectName(u"Disk_button")
+        sizePolicy.setHeightForWidth(self.Disk_button.sizePolicy().hasHeightForWidth())
+        self.Disk_button.setSizePolicy(sizePolicy)
+
+        self.horizontalLayout_16.addWidget(self.Disk_button, 0, Qt.AlignRight)
+
+
+        self.verticalLayout_13.addWidget(self.disk_tick_2)
 
 
         self.horizontalLayout_5.addWidget(self.widget_6)
@@ -630,7 +633,7 @@ class Ui_dashboard(object):
         self.retranslateUi(dashboard)
 
         self.Side_Bar.setCurrentIndex(0)
-        self.Pages.setCurrentIndex(1)
+        self.Pages.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(dashboard)
@@ -669,11 +672,11 @@ class Ui_dashboard(object):
         self.CPU.setText(QCoreApplication.translate("dashboard", u"CPU", None))
         self.GPU.setText(QCoreApplication.translate("dashboard", u"GPU", None))
         self.DIskUsage.setText(QCoreApplication.translate("dashboard", u"Disk Usage", None))
-        self.pushButton_6.setText("")
-        self.pushButton_7.setText("")
-        self.pushButton_8.setText("")
-        self.pushButton_9.setText("")
-        self.pushButton_10.setText("")
+        self.Os_button.setText("")
+        self.Ram_button.setText("")
+        self.Cpu_button.setText("")
+        self.Gpu_button.setText("")
+        self.Disk_button.setText("")
         self.label_3.setText(QCoreApplication.translate("dashboard", u"Compatiblity Status", None))
         self.Title_System.setText(QCoreApplication.translate("dashboard", u"System Details", None))
         self.OS_Info.setText("")

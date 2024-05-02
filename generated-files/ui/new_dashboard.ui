@@ -469,7 +469,7 @@ padding:4 px 5 px;
           <item>
            <widget class="QCustomQStackedWidget" name="Pages">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="HomeMain">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -630,6 +630,11 @@ padding:4 px 5 px;
                  </property>
                  <item>
                   <widget class="QLabel" name="GameName">
+                   <property name="font">
+                    <font>
+                     <hintingpreference>PreferDefaultHinting</hintingpreference>
+                    </font>
+                   </property>
                    <property name="text">
                     <string />
                    </property>
@@ -901,8 +906,8 @@ padding:4 px 5 px;
                        <string notr="true" />
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_13">
-                       <item>
-                        <widget class="QPushButton" name="pushButton_6">
+                       <item alignment="Qt::AlignRight">
+                        <widget class="QPushButton" name="Os_button">
                          <property name="sizePolicy">
                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                            <horstretch>0</horstretch>
@@ -927,7 +932,7 @@ padding:4 px 5 px;
                      <widget class="QWidget" name="Ram_tick" native="true">
                       <layout class="QHBoxLayout" name="horizontalLayout_14">
                        <item alignment="Qt::AlignRight">
-                        <widget class="QPushButton" name="pushButton_7">
+                        <widget class="QPushButton" name="Ram_button">
                          <property name="sizePolicy">
                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                            <horstretch>0</horstretch>
@@ -942,33 +947,11 @@ padding:4 px 5 px;
                       </layout>
                      </widget>
                     </item>
-                    <item>
+                    <item alignment="Qt::AlignRight">
                      <widget class="QWidget" name="cpu_tick" native="true">
                       <layout class="QHBoxLayout" name="horizontalLayout_15">
-                       <item alignment="Qt::AlignRight">
-                        <widget class="QPushButton" name="pushButton_8">
-                         <property name="sizePolicy">
-                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                          </sizepolicy>
-                         </property>
-                         <property name="text">
-                          <string />
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QWidget" name="disk_tick" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_17">
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <item alignment="Qt::AlignRight">
-                        <widget class="QPushButton" name="pushButton_9">
+                       <item>
+                        <widget class="QPushButton" name="Cpu_button">
                          <property name="sizePolicy">
                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                            <horstretch>0</horstretch>
@@ -985,12 +968,34 @@ padding:4 px 5 px;
                     </item>
                     <item>
                      <widget class="QWidget" name="GPU_tick" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_17">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <item alignment="Qt::AlignRight">
+                        <widget class="QPushButton" name="Gpu_button">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="text">
+                          <string />
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="disk_tick_2" native="true">
                       <layout class="QHBoxLayout" name="horizontalLayout_16">
                        <property name="leftMargin">
                         <number>0</number>
                        </property>
                        <item alignment="Qt::AlignRight">
-                        <widget class="QPushButton" name="pushButton_10">
+                        <widget class="QPushButton" name="Disk_button">
                          <property name="sizePolicy">
                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                            <horstretch>0</horstretch>
