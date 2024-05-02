@@ -3,9 +3,9 @@ import psycopg2
 from system_info import Get_User_Info  # Importing Get_User_Info function from system_info module
 
 # Database connection information
-Dbname = 'gamereq'
+Dbname = 'PyProject'
 Username = 'postgres'
-Password = 'oracle'
+Password = 'savin'
 Hostname = 'localhost'
 Port = '5432'
 
@@ -45,21 +45,30 @@ def connect_to_database():
         print(f"Error connecting to the database: {e}")
 
 # Function to compare user's hardware information with game requirements
+import math
+
+
 def Compare_minimum_info(gamename):
     # Retrieve user hardware information
     user_os, user_processor, user_ram, user_rom, user_gpu = Get_User_Info()
     user_CPU = cpu_gpu_rating("CPU", user_processor)
     user_GPU = cpu_gpu_rating("GPU", user_gpu)
     user_OS = cpu_gpu_rating("OS", user_os)
+
     # Retrieve game hardware requirements from the database
     game_hardware_info = game_mini_info(gamename)
-    if game_hardware_info:
-        game_CPU = cpu_gpu_rating("CPU", game_hardware_info['Processor'])
-        game_GPU = cpu_gpu_rating("GPU", game_hardware_info['GPU'])
-        game_OS = cpu_gpu_rating("OS", game_hardware_info['OS'])
-    else:
+
+    if game_hardware_info is None:
+        print(f"Game '{gamename}' not found in the database.")
+        return None, f"Game '{gamename}' not found in the database."  # Return None if game is not found
+
+    if not game_hardware_info:
         print("No game hardware information found.")
-        return {}
+        return {}, "No game hardware information found."
+
+    game_CPU = cpu_gpu_rating("CPU", game_hardware_info['Processor'])
+    game_GPU = cpu_gpu_rating("GPU", game_hardware_info['GPU'])
+    game_OS = cpu_gpu_rating("OS", game_hardware_info['OS'])
 
     # Check compatibility for each component
     compatibility_status = {}
@@ -111,11 +120,12 @@ def Compare_minimum_info(gamename):
     # Determine final compatibility status
     all_components_compatible = all(status == "Compatible" for status in compatibility_status.values())
     if all_components_compatible:
-        print(f"All components are compatible for {gamename}.")
+        compatibility_message = f"All components are compatible for {gamename}."
     else:
-        print(f"Not all components are compatible for {gamename}.")
-    print(compatibility_status)
-    return compatibility_status
+        compatibility_message = f"Not all components are compatible for {gamename}."
+
+    return compatibility_status, compatibility_message
+
 
 # Function to retrieve game hardware requirements from the database
 def game_mini_info(gamename):
@@ -152,4 +162,3 @@ def close_database_connection():
         cur.close()
     if conn:
         conn.close()
-

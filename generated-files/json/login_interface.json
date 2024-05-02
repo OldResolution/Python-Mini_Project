@@ -7,22 +7,6 @@
     {
       "name": "close_window_button",
       "icon": "Qss/icons/icons/feather/x-circle.png"
-    },
-    {
-      "name": "google",
-      "icon": "Qss/icons/icons/font_awesome/brands/google-plus-g.png"
-    },
-    {
-      "name": "github",
-      "icon": "Qss/icons/icons/feather/facebook.png"
-    },
-    {
-      "name": "google_2",
-      "icon": "Qss/icons/icons/font_awesome/brands/google-plus-g.png"
-    },
-    {
-      "name": "github_2",
-      "icon": "Qss/icons/icons/feather/facebook.png"
     }
   ]
 }

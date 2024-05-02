@@ -1,0 +1,38 @@
+{
+  "QMainWindow": [
+    {
+      "tittle": "Forgot Password",
+      "icon": ":/font_awesome_brands/icons/font_awesome/brands/windows.png",
+      "frameless": false,
+      "transluscentBg": true,
+      "navigation": [
+        {
+          "close": "close_window_button",
+          "moveWindow": "header"
+        }
+      ]
+    }
+  ],
+  "QSettings": [
+    {
+      "ThemeSettings": [
+        {
+          "CustomTheme": [
+            {
+              "Background-color": "#F5F5F5",
+              "Text-color": "#333333",
+              "Accent-color": "#008080",
+              "Icons-color": "#333333",
+              "Theme-name": "Modern Teal Slate",
+            }
+          ]
+        }
+      ],
+      "AppSettings": {
+        "OrginizationName": "Modern UI",
+        "ApplicationName": "Modern UI Company",
+        "OrginizationDormain": "Modern UI.org"
+      }
+    }
+  ]
+}
